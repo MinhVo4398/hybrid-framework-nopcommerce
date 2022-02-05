@@ -1,0 +1,33 @@
+package pageObjects;
+
+import commons.BasePage;
+import org.openqa.selenium.WebDriver;
+import pageUIs.HomePageUI;
+
+public class HomePageObject extends BasePage {
+    // Biến global;
+    private WebDriver driver;
+
+    //constructor
+    public  HomePageObject(WebDriver driver) {
+      //  Biến local
+        this.driver = driver;
+    }
+
+    public void clickToRegisterLink() {
+        waitForElementClickable(driver,HomePageUI.REGISTER_LINK);
+        clickToElement(driver,HomePageUI.REGISTER_LINK);
+
+    }
+
+    public void clickToLoginLink() {
+        waitForElementClickable(driver,HomePageUI.LOGIN_LINK);
+        clickToElement(driver,HomePageUI.LOGIN_LINK);
+    }
+
+
+    public boolean isMyAccountLinkDisplayed() {
+        waitForElementVisible(driver,HomePageUI.MY_ACCOUNT_LINK);
+        return isElementDisplayed(driver,HomePageUI.MY_ACCOUNT_LINK);
+    }
+}
