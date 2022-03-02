@@ -2,14 +2,15 @@ package com.nopcommerce.user;
 
 
 import commons.BaseTest;
+import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.RegisterPageObject;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
 
 import java.util.Random;
 

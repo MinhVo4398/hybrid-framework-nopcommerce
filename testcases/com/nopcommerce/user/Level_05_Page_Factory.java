@@ -13,10 +13,9 @@ import commons.BaseTest;
 //import pageObjects.HomePageObject;
 //import pageObjects.LoginPageObject;
 //import pageObjects.RegisterPageObject;
-
-import pageFactory.HomePageObject;
-import pageFactory.RegisterPageObject;
-import pageFactory.LoginPageObject;
+import pageFactory.nopCommerce.HomePageObject;
+import pageFactory.nopCommerce.LoginPageObject;
+import pageFactory.nopCommerce.RegisterPageObject;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;

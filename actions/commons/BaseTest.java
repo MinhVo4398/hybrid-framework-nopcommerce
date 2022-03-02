@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -87,9 +88,17 @@ public class BaseTest {
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         //Mở Url nó qua trang  HomePage
-        driver.get("https://demo.nopcommerce.com/");
-
+       // driver.get("https://demo.nopcommerce.com/");
+        
+        driver.get("http://live.techpanda.org/");
         return driver;  // return driver để map qua bên Class kế thừa xài
 
     }
+    
+    
+	protected int generateFakeNumber() {
+		Random rd = new Random();
+	return	rd.nextInt(9999);
+
+	}
 }

@@ -1,8 +1,9 @@
-package pageObjects;
+package pageObjects.nopCommerce;
 
 import commons.BasePage;
+import pageUIs.nopCommerce.HomePageUI;
+
 import org.openqa.selenium.WebDriver;
-import pageUIs.HomePageUI;
 
 public class HomePageObject extends BasePage {
     // Biến global;
@@ -14,15 +15,23 @@ public class HomePageObject extends BasePage {
         this.driver = driver;
     }
 
-    public void clickToRegisterLink() {
+    public RegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver,HomePageUI.REGISTER_LINK);
         clickToElement(driver,HomePageUI.REGISTER_LINK);
+        //2
+    // return new RegisterPageObject(driver);
+        
+        //3
+        return PageGeneratorManager.getRegisterPage(driver);
 
     }
 
-    public void clickToLoginLink() {
+    public LoginPageObject clickToLoginLink() {
         waitForElementClickable(driver,HomePageUI.LOGIN_LINK);
         clickToElement(driver,HomePageUI.LOGIN_LINK);
+  //2    return  new LoginPageObject(driver);
+        return PageGeneratorManager.getLoginPage(driver);
+       
     }
 
 
@@ -30,4 +39,11 @@ public class HomePageObject extends BasePage {
         waitForElementVisible(driver,HomePageUI.MY_ACCOUNT_LINK);
         return isElementDisplayed(driver,HomePageUI.MY_ACCOUNT_LINK);
     }
+
+	public MyAccountPageObject clickToMyAccountLink() {
+		waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);		
+		 clickToElement(driver,HomePageUI.LOGIN_LINK);
+		return PageGeneratorManager.getMyAccountPage(driver);
+		 
+	}
 }
