@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.MyAccountPageObject;
+import pageObjects.nopCommerce.CustomerInforPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.RegisterPageObject;
 
@@ -29,7 +29,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	private 	HomePageObject homePage ;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
-	private MyAccountPageObject myAccountPage;
+	private CustomerInforPageObject myAccountPage;
 	
 	
 	private String projectPath = System.getProperty("user.dir"); // lấy ra đường dẫn
@@ -191,7 +191,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		myAccountPage = homePage.clickToMyAccountLink();
 
 		// myAccountPage sẽ làm những action khác (sự kiện của MyAccountPage)
-		myAccountPage.clickToNewsletterCheckbox();
+		//myAccountPage.clickToNewsletterCheckbox();
 	}
 
 	@AfterClass

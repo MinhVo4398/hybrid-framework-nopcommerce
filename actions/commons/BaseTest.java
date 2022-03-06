@@ -88,9 +88,9 @@ public class BaseTest {
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         //Mở Url nó qua trang  HomePage
-       // driver.get("https://demo.nopcommerce.com/");
+        driver.get("https://demo.nopcommerce.com/");
         
-        driver.get("http://live.techpanda.org/");
+      //  driver.get("http://live.techpanda.org/");
         return driver;  // return driver để map qua bên Class kế thừa xài
 
     }
