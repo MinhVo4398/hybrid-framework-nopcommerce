@@ -9,14 +9,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.AddressPageObject;
-import pageObjects.nopCommerce.CustomerInforPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.MyProductReviewPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.RegisterPageObject;
-import pageObjects.nopCommerce.RewardPointPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.user.UserAddressPageObject;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
+import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 
 public class Level_07_Switch_Page extends BaseTest {
 	//Declare
@@ -25,13 +25,13 @@ public class Level_07_Switch_Page extends BaseTest {
 	private  String  firstName, lastName, validPassword, emailAddress;
 
 	//Declare + Init
-	private 	HomePageObject homePage ;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject customerInforPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
+	private 	UserHomePageObject homePage ;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInforPageObject customerInforPage;
+	private UserAddressPageObject addressPage;
+	private UserMyProductReviewPageObject myProductReviewPage;
+	private UserRewardPointPageObject rewardPointPage;
 	
 	
 	private String projectPath = System.getProperty("user.dir"); // lấy ra đường dẫn
@@ -41,7 +41,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 			
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 	
 		firstName ="Automation";
 		lastName ="FC";		
@@ -55,7 +55,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	public void User_01_Register() {
 		
 		
-		registerPage= homePage.clickToRegisterLink(); // B= A.action
+		registerPage= homePage.openRegisterPage(); // B= A.action
 	
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
@@ -77,7 +77,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	@Test
 	public void User_02_Login() {
 		
-		loginPage =	homePage.clickToLoginLink();
+		loginPage =	homePage.openLoginPage();
 		
 		
 			
@@ -92,7 +92,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	@Test
 	public void User_03_Customer_Infor() {
 			
-		customerInforPage = homePage.clickToMyAccountLink();
+		customerInforPage = homePage.openMyAccountPage();
 		
 		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 
@@ -125,6 +125,11 @@ public class Level_07_Switch_Page extends BaseTest {
 	
 		// My Product Review -> Address
 	addressPage = myProductReviewPage.openAddressPage(driver);
+	
+	customerInforPage =	addressPage.openCustomerInforPage(driver);
+	
+	myProductReviewPage =	customerInforPage.openMyProductReviewPage(driver);
+	
 
 	}
 	

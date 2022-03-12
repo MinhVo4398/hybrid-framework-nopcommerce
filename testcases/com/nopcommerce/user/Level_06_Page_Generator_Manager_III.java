@@ -10,11 +10,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.CustomerInforPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.RegisterPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -26,10 +26,10 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	private  String  firstName, lastName, validPassword, invalidPassword, existingEmail, invalidEmail, notFoundEmail;
 
 	//Declare + Init
-	private 	HomePageObject homePage ;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject myAccountPage;
+	private 	UserHomePageObject homePage ;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInforPageObject myAccountPage;
 	
 	
 	private String projectPath = System.getProperty("user.dir"); // lấy ra đường dẫn
@@ -40,7 +40,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		driver = getBrowserDriver(browserName);
 		
 		
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 	
 
 
@@ -53,7 +53,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		notFoundEmail = "afc"+ generateFakeNumber()+ "@mail.com";
 
 		System.out.println("Pre-condition- Step 01: Click to Register link");
-		registerPage= homePage.clickToRegisterLink(); // B= A.action
+		registerPage= homePage.openRegisterPage(); // B= A.action
 		
 		
 
@@ -85,7 +85,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_01_Emtpy_Data() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage =	homePage.clickToLoginLink();
+		loginPage =	homePage.openLoginPage();
 
 
 
@@ -100,7 +100,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_02_Invalid_Email() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage=	homePage.clickToLoginLink();
+		loginPage=	homePage.openLoginPage();
 
 	
 
@@ -121,7 +121,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_03_Email_Not_Found() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 	
 		System.out.println("Login Page: Step 02 Input Invalid Email ");
@@ -139,7 +139,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_04_Existing_Email_Empty_Pasword() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		
 		System.out.println("Login Page: Step 02 Input Existing Email and No input Password");
@@ -157,7 +157,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage =	homePage.clickToLoginLink();
+		loginPage =	homePage.openLoginPage();
 				
 		System.out.println("Login Page: Step 02 Input Existing Email and No input Password");
 		loginPage.inputToEmailTextbox(existingEmail);
@@ -175,7 +175,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	@Test
 	public void Login_06_Valid_Email_Password() {
 		System.out.println("HomePage : Step 01 Click login Page");
-		loginPage = homePage.clickToLoginLink();	
+		loginPage = homePage.openLoginPage();	
 		
 		System.out.println("Login Page: Step 02 Input Existing Email and No input Password");
 		loginPage.inputToEmailTextbox(existingEmail);
@@ -188,7 +188,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		System.out.println("HomePahe - Step 04: Verify My account link  hiển thị");
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 			
-		myAccountPage = homePage.clickToMyAccountLink();
+		myAccountPage = homePage.openMyAccountPage();
 
 		// myAccountPage sẽ làm những action khác (sự kiện của MyAccountPage)
 		//myAccountPage.clickToNewsletterCheckbox();
