@@ -119,6 +119,12 @@ public  class BasePage extends BasePageUI {
     private  By getByXpath(String xpathLocator) {
         return	By.xpath(xpathLocator);
     }
+    
+//    private By getByLocator(String locatorType) {
+//    	By by = null;
+//    	
+//    	return by;
+//    }
 
     private WebElement getWebElement(WebDriver driver, String xpathLocator) {
         return driver.findElement(getByXpath(xpathLocator));

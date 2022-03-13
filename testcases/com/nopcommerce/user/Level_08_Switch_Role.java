@@ -87,7 +87,7 @@ public class Level_08_Switch_Role extends BaseTest {
 		// Login Page (Admin) -> open Portal url -> Home Page (User)
 		adminLoginPage.openPageUrl(driver, GlobalConstant.PORTAL_PAGE_URL);
 		
-		// Mở ra trang HomePage (user) khởi tạo nó lên
+		// Mở ra trang HomePage (user) khởi tạo nó lên 
 		userHomePage  = PageGeneratorManager.getUserHomePage(driver);
 		
 		//Home Page -> Login(User)
