@@ -120,11 +120,36 @@ public  class BasePage extends BasePageUI {
         return	By.xpath(xpathLocator);
     }
     
-//    private By getByLocator(String locatorType) {
-//    	By by = null;
-//    	
-//    	return by;
-//    }
+    // locatorType: id= / css=/ xpath=/ class =
+    // locatorType: ID=/ CSS=/ XPATH=/ NAME=/ CLASS=
+    // locatorType: Id=/ Css=/ XPath=/ Name=/ Class=
+    private By getByLocator(String locatorType) {
+    	By by = null;
+    	if (locatorType.startsWith("id=")|| locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
+    		
+    		by = By.id(locatorType.substring(3));
+		}
+    	else if(locatorType.startsWith("class=") || locatorType.startsWith("CLASS=") || locatorType.startsWith("Class=")) {
+    		by = By.className(locatorType.substring(6));
+    	}
+    	else if(locatorType.startsWith("name=") || locatorType.startsWith("NAME=") || locatorType.startsWith("Name=")) {
+    		by = By.name(locatorType.substring(5));
+    	}
+     	else if(locatorType.startsWith("css=") || locatorType.startsWith("CSS=") || locatorType.startsWith("css=")) {
+    		by = By.cssSelector(locatorType.substring(4));
+    	}
+    	else if(locatorType.startsWith("xpath=")) {
+    		by = By.xpath(locatorType.substring(6));
+    	}
+    	else {
+    		throw new RuntimeException("Locator type is not supported!");
+    	}
+    	
+    	
+    	
+    	
+    	return by;
+    }
 
     private WebElement getWebElement(WebDriver driver, String xpathLocator) {
         return driver.findElement(getByXpath(xpathLocator));
