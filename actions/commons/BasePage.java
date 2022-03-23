@@ -146,12 +146,21 @@ public  class BasePage extends BasePageUI {
     	else {
     		throw new RuntimeException("Locator type is not supported!");
     	}
-    	
-    	
-    	
+    	  	   	
     	return by;
     }
-
+    
+    // Nếu như truyền vào locator type là xpath = đúng
+    // Truyền vào locator type khác xpath = sai
+    private String getDynamicXpath(String locatorType, String...values) {
+    	if(locatorType.startsWith("xpath=") || locatorType.startsWith("XPATH=") || 
+    			locatorType.startsWith("Xpath=") ||locatorType.startsWith("XPath=")) {
+    	locatorType = String.format(locatorType,(Object[]) values);
+    	
+    	}
+    	return locatorType;
+    }
+    
     private WebElement getWebElement(WebDriver driver, String locatorType) {
         return driver.findElement(getByLocator(locatorType));
     }
@@ -164,9 +173,21 @@ public  class BasePage extends BasePageUI {
     public void clickToElement(WebDriver driver, String locatorType) {
         getWebElement(driver, locatorType).click();
     }
+    
+
+    public void clickToElement(WebDriver driver, String locatorType, String...dynamicValues) {
+        getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).click();
+    }
+
 
     public void sendkeyToElement(WebDriver driver, String locatorType, String textValue) {
         WebElement element = getWebElement(driver, locatorType);
+        element.clear();
+        element.sendKeys(textValue);
+    }
+    
+    public void sendkeyToElement(WebDriver driver, String locatorType, String textValue,String...dynamicValues) {
+        WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
         element.clear();
         element.sendKeys(textValue);
     }

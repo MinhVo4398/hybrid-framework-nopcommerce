@@ -40,24 +40,24 @@ public class Topic_14_StringFormat {
 		
 	}
 	//1 tham số động
-//	public static void clickToLink(String dynamicLocator, String pageName) {
-//		// dynamicLocator = //div[contains(@class,'account-navigation')]//a[text()='%s']
-//		//pageName= Customer Info	
-//		String locator =String.format(dynamicLocator, pageName);
-//																															
-//		System.out.println("Click to: "+ locator);
-//		
-//	}
-//	
+	public static void clickToLink(String dynamicLocator, String pageName) {
+		// dynamicLocator = //div[contains(@class,'account-navigation')]//a[text()='%s']
+		//pageName= Customer Info	
+		String locator =String.format(dynamicLocator, pageName);
+																															
+		System.out.println("Click to: "+ locator);
+		
+	}
+	
 	//2 tham số động
-//	public static void clickToLink(String dynamicLocator, String areaName, String pageName) {
-//		// dynamicLocator = //div[contains(@class,'%s')]//a[text()='%s']
-//		//pageName= Customer Info	
-//		String locator =String.format(dynamicLocator,areaName, pageName);
-//																															
-//		System.out.println("Click to: "+ locator);
-//		
-//	}
+	public static void clickToLink(String dynamicLocator, String areaName, String pageName) {
+		// dynamicLocator = //div[contains(@class,'%s')]//a[text()='%s']
+		//pageName= Customer Info	
+		String locator =String.format(dynamicLocator,areaName, pageName);
+																															
+		System.out.println("Click to: "+ locator);
+		
+	}
 	
 	// 1-n tham số động
 	public static void clickToLink(String dynamicLocator, String... params) {
