@@ -34,13 +34,14 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 	private UserRewardPointPageObject rewardPointPage;
 	
 	
-	private String projectPath = System.getProperty("user.dir"); // lấy ra đường dẫn
+	
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-			
+		
+		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 	
 		firstName ="Automation";
@@ -139,6 +140,38 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 		
 		
 	}
+	
+	@Test
+	public void User_03_Dynamic_Page_02() {
+		// Cách này k cần switch case nhưng ko có tính kết nối giữa các page 
+		// Nhưng vẫn phải đảm bảo là New Page (Khởi tạo page) đó lên
+		
+		// Customer Info -> My Product Review
+		customerInforPage.openPagesAtMyAccountByPageName(driver, "My product reviews");
+		
+		// Khởi tạo My Product Review Page
+		myProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driver);
+		
+		//My Product Review -> Reward Point
+		myProductReviewPage.openPagesAtMyAccountByPageName(driver, "Reward points");
+		rewardPointPage = PageGeneratorManager.getUserRewardPointPage(driver);
+		
+		
+		// Reward Point -> Address
+		rewardPointPage.openPagesAtMyAccountByName(driver, "Addresses");
+		addressPage = PageGeneratorManager.getUserAddressPage(driver);
+	
+		
+		// Address -> Reward Point
+		addressPage.openPagesAtMyAccountByName(driver, "Reward points");
+		
+		rewardPointPage= PageGeneratorManager.getUserRewardPointPage(driver);
+	
+	
+		
+		
+	}
+
 
 
 	@AfterClass
