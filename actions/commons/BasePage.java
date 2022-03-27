@@ -496,6 +496,7 @@ public class BasePage extends BasePageUI {
 	}
 
 	// Tối ưu ở bài học Level_09_Dynamic_Locator
+	//C1: 
 	public BasePage openPagesAtMyAccountByName(WebDriver driver, String pageName) {
 
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
@@ -519,7 +520,8 @@ public class BasePage extends BasePageUI {
 		}
 
 	}
-	
+	// Tối ưu ở bài học Level_09_Dynamic_Locator
+	//C2: 
 	public void openPagesAtMyAccountByPageName(WebDriver driver, String pageName) {
 
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
