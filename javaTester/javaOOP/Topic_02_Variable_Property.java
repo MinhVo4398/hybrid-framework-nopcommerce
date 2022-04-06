@@ -1,6 +1,6 @@
 package javaOOP;
 
-public class Topic_02_Variable_Property_Method {
+public class Topic_02_Variable_Property {
 	
 	static int studentNumber;
 	static float studentPrice;
@@ -57,7 +57,7 @@ public class Topic_02_Variable_Property_Method {
 	}
 	
 	// Constructor
-	public Topic_02_Variable_Property_Method() {
+	public Topic_02_Variable_Property() {
 		// Local variable - biến cục bộ: constructor
 		String studentName = "Automation FC";
 		
