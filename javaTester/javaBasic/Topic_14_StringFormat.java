@@ -39,6 +39,12 @@ public class Topic_14_StringFormat {
 		System.out.println("Click to: "+ locator);
 		
 	}
+	
+	public static void clickToLink(int number) {
+		System.out.println("Click to: "+ number);
+		
+	}
+	
 	//1 tham số động
 	public static void clickToLink(String dynamicLocator, String pageName) {
 		// dynamicLocator = //div[contains(@class,'account-navigation')]//a[text()='%s']
@@ -54,6 +60,16 @@ public class Topic_14_StringFormat {
 		// dynamicLocator = //div[contains(@class,'%s')]//a[text()='%s']
 		//pageName= Customer Info	
 		String locator =String.format(dynamicLocator,areaName, pageName);
+																															
+		System.out.println("Click to: "+ locator);
+		
+	}
+	
+	//3 tham số động
+	public static void clickToLink(String dynamicLocator, String areaName, String pageName, String otherParam) {
+		// dynamicLocator = //div[contains(@class,'%s')]//a[text()='%s']
+		//pageName= Customer Info	
+		String locator =String.format(dynamicLocator,areaName, pageName,otherParam);
 																															
 		System.out.println("Click to: "+ locator);
 		
