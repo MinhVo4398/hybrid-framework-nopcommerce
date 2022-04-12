@@ -15,16 +15,18 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
-    private String projectPath = System.getProperty("user.dir"); // lấy ra đường dẫn
 
     protected WebDriver getBrowserDriver(String browserName) {
+    	
+    	BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+    	
         System.out.println("Run on " +browserName);
-        if(browserName.equals("firefox")) {
-           // System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+        if(browserList ==BrowserList.FIREFOX ) {
+           
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
-       else if(browserName.equals("h_firefox")) {
+       else if(browserList ==BrowserList.H_FIREFOX) {
             WebDriverManager.firefoxdriver().setup();
 
             // Browser Option : Selenium 3.xx
@@ -33,11 +35,11 @@ public class BaseTest {
             options.addArguments("window-size = 1920x1080");
             driver = new FirefoxDriver(options);
         }
-        else if(browserName.equals("chrome")) {
+        else if(browserList ==BrowserList.CHROME) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
-        else if(browserName.equals("h_chrome")) {
+        else if(browserList ==BrowserList.H_CHROME) {
             System.out.println(browserName);
             WebDriverManager.chromedriver().setup();
 
@@ -47,23 +49,23 @@ public class BaseTest {
             options.addArguments("window-size = 1920x1080");
             driver = new ChromeDriver(options);
         }
-        else if(browserName.equals("edge")) {
+        else if(browserList ==BrowserList.EDGE) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
 
-        else if(browserName.equals("ie")) {
+        else if(browserList ==BrowserList.IE) {
             WebDriverManager.iedriver().arch32().setup();
             driver = new InternetExplorerDriver();
         }
 
-        else if(browserName.equals("opera")) {
+        else if(browserList ==BrowserList.OPERA) {
             //opera cứ tải cái mới nhất
             WebDriverManager.operadriver().setup();
             driver = new OperaDriver();
         }
 
-        else if(browserName.equals("coccoc")) {
+        else if(browserList ==BrowserList.COCOC) {
             // Cốc Cốc browser trừ đi 5-6 version ra ChromeDriver
             WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
 
@@ -72,7 +74,7 @@ public class BaseTest {
             driver = new ChromeDriver(options);
 
         }
-        else if(browserName.equals("brave")) {
+        else if(browserList ==BrowserList.BRAVE) {
             //Brave browser version nào dùng chromedriver version đó
 
             WebDriverManager.chromedriver().driverVersion("97.0.4692.71").setup();
@@ -88,13 +90,37 @@ public class BaseTest {
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         //Mở Url nó qua trang  HomePage
-        driver.get(GlobalConstant.PORTAL_PAGE_URL);
+      driver.get(GlobalConstant.PORTAL_TESTING_URL);
+        
+//        driver.get(getEnvironmentUrl(environmentName));
         
       //  driver.get("http://live.techpanda.org/");
         return driver;  // return driver để map qua bên Class kế thừa xài
 
     }
     
+
+    
+    
+    private  String getEnvironmentUrl(String serverName) {
+    	String envUrl = null;
+    	EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
+    	if(environment == EnvironmentList.DEV) {
+    		envUrl ="https://demo.nopcommerce.com/";
+    			
+    	}
+    	else if(environment == EnvironmentList.TESTING) {
+    		envUrl ="https://admin-demo.nopcommerce.com";
+    	}
+    	else if(environment == EnvironmentList.STAGING) {
+    		envUrl ="https://staging.orangehrm.live.com";
+    	}
+    	else if(environment == EnvironmentList.PRODUCTION) {
+    		envUrl ="https://production.orangehrm.live.com";
+    	}
+    	
+    	return envUrl;
+    }
     
 	protected int generateFakeNumber() {
 		Random rd = new Random();

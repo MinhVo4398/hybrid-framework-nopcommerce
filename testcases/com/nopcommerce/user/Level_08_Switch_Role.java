@@ -68,7 +68,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	userHomePage = userCustomerInforPage.clickToLogoutLinkAtUserPage(driver);
 	
 		// User Home Page -> Open Admin Page -> Login Page (Admin)
-		userHomePage.openPageUrl(driver,GlobalConstant.ADMIN_PAGE_URL );
+		userHomePage.openPageUrl(driver,GlobalConstant.ADMIN_TESTING_URL );
 		//open ra trang AdminLogin Page -> Khoi tao len 
 		adminLoginPage=PageGeneratorManager.getAdminLoginPage(driver);
 		
@@ -85,7 +85,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	@Test
 	public void Role_02_Admin_To_User() {
 		// Login Page (Admin) -> open Portal url -> Home Page (User)
-		adminLoginPage.openPageUrl(driver, GlobalConstant.PORTAL_PAGE_URL);
+		adminLoginPage.openPageUrl(driver, GlobalConstant.PORTAL_TESTING_URL);
 		
 		// Mở ra trang HomePage (user) khởi tạo nó lên 
 		userHomePage  = PageGeneratorManager.getUserHomePage(driver);
