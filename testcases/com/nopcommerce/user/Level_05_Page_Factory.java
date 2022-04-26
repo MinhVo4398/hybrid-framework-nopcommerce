@@ -21,6 +21,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Level_05_Page_Factory extends BaseTest {
+	
 	//Declare
 	private WebDriver driver;
 

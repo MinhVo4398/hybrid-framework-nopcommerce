@@ -92,14 +92,82 @@ public class BaseTest {
         //Mở Url nó qua trang  HomePage
       driver.get(GlobalConstant.PORTAL_TESTING_URL);
         
-//        driver.get(getEnvironmentUrl(environmentName));
-        
-      //  driver.get("http://live.techpanda.org/");
+      
         return driver;  // return driver để map qua bên Class kế thừa xài
 
     }
     
+ protected WebDriver getBrowserDriver(String browserName, String environmentName) {
+    	
+	 	if(browserName.equals("firefox")) {
+	 		WebDriverManager.firefoxdriver().setup();
+	 		driver = new FirefoxDriver();
+	 		
+	 	}
+	 	else if (browserName.equals("h_firefox")) {
+	 		WebDriverManager.firefoxdriver().setup();
+	 		FirefoxOptions options = new FirefoxOptions();
+	 		options.addArguments("--headless");
+	 		options.addArguments("window-size=1920x1080");
+	 		driver = new FirefoxDriver(options);
+	 		
+	 	}
+		if(browserName.equals("chrome")) {
+	 		WebDriverManager.chromedriver().setup();
+	 		driver = new ChromeDriver();
+	 		
+	 	}
+	 	else if (browserName.equals("h_chrome")) {
+	 		WebDriverManager.firefoxdriver().setup();
+	 		ChromeOptions options = new ChromeOptions();
+	 		options.addArguments("--headless");
+	 		options.addArguments("window-size=1920x1080");
+	 		driver = new ChromeDriver(options);
+	 		
+	 	}
+		
+	 	else if(browserName.equals("edge")) {
+	 		WebDriverManager.edgedriver().setup();
+	 		driver=  new EdgeDriver();
+	 		
+	 	}
+	 	else if(browserName.equals("ie")) {
+	 		 WebDriverManager.iedriver().arch32().setup();
+	            driver = new InternetExplorerDriver();
+	 	}
+	 	else if(browserName.equals("opera")) {
+	 		 //opera cứ tải cái mới nhất
+            WebDriverManager.operadriver().setup();
+            driver = new OperaDriver();
+	 	}
+	 	 else if(browserName.equals("cococ")) {
+	            // Cốc Cốc browser trừ đi 5-6 version ra ChromeDriver
+	            WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
 
+	            ChromeOptions options = new ChromeOptions();
+	            options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+	            driver = new ChromeDriver(options);
+
+	        }
+	        else if(browserName.equals("brave")) {
+	            //Brave browser version nào dùng chromedriver version đó
+
+	            WebDriverManager.chromedriver().driverVersion("97.0.4692.71").setup();
+	            ChromeOptions options = new ChromeOptions();
+	            options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+	            driver = new ChromeDriver(options);
+
+	        }
+	        else {
+	        	throw new RuntimeException("Browser name invalid");
+	        }
+		
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.get(getEnvironmentUrl(environmentName));
+			return driver;
+
+
+    }
     
     
     private  String getEnvironmentUrl(String serverName) {
