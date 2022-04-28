@@ -1,33 +1,27 @@
 package javaOOP;
 
-public class Topic_05_This_Super {
-	private int firstNumber;
-	private int secondNumber;
-	
-	public Topic_05_This_Super() {
-		this(10, 15);
-		System.out.println("Demo");
+import java.util.concurrent.TimeUnit;
 
-		//Topic_05_This_Super(10,20); // k chấp nhận, phải dùng this như bên trên
-	}
+import org.openqa.selenium.WebDriver;
+
+public class Topic_05_This_Super extends BaseOOP {
+	// Global
+	private WebDriver driver;
+	public long shortTimeout =15;
+	protected long longTimeout = 45; 
 	
-	public Topic_05_This_Super(int firstNumber, int secondNumber) {
-		this.firstNumber = firstNumber;
-		this.secondNumber = secondNumber;
+	public void setImplicitWait() {
+		// Local
+		long shortTimeout = 15;
 		
+		driver.manage().timeouts().implicitlyWait(super.longTimeout, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(shortTimeout, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(this.shortTimeout, TimeUnit.SECONDS);
 	}
 	
-	public void sumNumber() {
-		System.out.println(this.firstNumber + this.secondNumber);
-	}
-	 
-	public void showNumber() {
-		this.sumNumber();
-	}
 	
 	public static void main(String[] args) {
-		Topic_05_This_Super topic = new Topic_05_This_Super(15,7);
-		topic.sumNumber();
+		
 	}
 
 }
