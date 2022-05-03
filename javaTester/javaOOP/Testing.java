@@ -1,20 +1,24 @@
 package javaOOP;
 
-public class Testing extends Annimal  {
+public class Testing   {
 	public static void main(String[] args) {
 		
-
+		Topic_06_Getter_Setter topic = new Topic_06_Getter_Setter();
+			
+		// Happy case
+		topic.setPersonName("Automation FC");
+		System.out.println(topic.getPersonName());
 		
-	}
-
-	@Override
-	public void setAnnimalName() {
+		// Unhappy case
+		topic.setPersonName(null);
+		System.out.println(topic.getPersonName());
 		
 		
-	}
-	
-
-	 
+		// Unhappy case
+		topic.setPersonName("");
+		System.out.println(topic.getPersonName());
+		
+	}	 
 		
 }
  
