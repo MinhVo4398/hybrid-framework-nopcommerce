@@ -1,6 +1,6 @@
-package javaOOP;
+package javaOOP.overloading;
 
-public class Topic_07_Overloading {
+public class Overloading {
 	private int firstNumber;
 	private int secondNumber;
 	
@@ -26,7 +26,8 @@ public class Topic_07_Overloading {
 	
 	
 	public static void main(String[] args) { 
-		System.out.println();
+		Overloading over = new Overloading();
+		over.sumNumber(15);
 		
 	}
 
