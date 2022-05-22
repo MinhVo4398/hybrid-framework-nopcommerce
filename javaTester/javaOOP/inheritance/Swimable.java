@@ -1,6 +1,6 @@
 package javaOOP.inheritance;
 
-public class Swimable {
+public interface Swimable {
 	
 
 }

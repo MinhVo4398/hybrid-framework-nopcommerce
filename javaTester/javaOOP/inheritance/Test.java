@@ -5,10 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Test {
 	public static void main(String[] args) {
 		Dog dog = new Dog();
+		dog.setAge(-15);
+		System.out.println(dog.getAge());
 		
-		ChromeDriver cDriver = null;
-		cDriver.getCurrentUrl();
-		cDriver.findElementsById("");
 		
 	}
 	

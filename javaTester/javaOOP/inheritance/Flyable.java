@@ -1,5 +1,5 @@
 package javaOOP.inheritance;
 
-public class Flyable {
+public interface Flyable {
 
 }
