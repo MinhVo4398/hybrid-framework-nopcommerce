@@ -10,11 +10,14 @@ import java.awt.Shape;
 import java.awt.image.ImageObserver;
 import java.text.AttributedCharacterIterator;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class GUI extends Graphics {
 
 	@Override
 	public Graphics create() {
-		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
 		return null;
 	}
 
