@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HandleException {
+public class ExceptionType {
 	FirefoxDriver driver;
 	@Test
 	public void TC_01()  {	
