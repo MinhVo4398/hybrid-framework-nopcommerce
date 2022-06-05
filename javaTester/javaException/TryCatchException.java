@@ -1,5 +1,6 @@
 package javaException;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,5 +42,17 @@ public class TryCatchException {
 	public static void sleepInSecond(long timeout) throws InterruptedException {
 			Thread.sleep(timeout *1000);
 	}
-
+	
+	public static void findFile() throws IOException {
+		String fileName = "automationfc.jpg";
+		File newFile = new File(fileName);
+		if(newFile.exists() && ! newFile.isDirectory()) {
+			// Action something
+		}
+		else {
+			throw new IOException("This file not found: "+fileName);
+		}
+	}
+ 	
+	
 }
