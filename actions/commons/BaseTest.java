@@ -10,20 +10,22 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import exception.BrowserNotSupport;
+
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
 
-    protected WebDriver getBrowserDriver(String browserName) {
+    protected WebDriver getBrowserDriver(String browserName) throws BrowserNotSupport {
     	
     	BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
     	
         System.out.println("Run on " +browserName);
         if(browserList ==BrowserList.FIREFOX ) {
            
-            WebDriverManager.firefoxdriver().setup();
+            WebDriverManager.firefoxdriver().setup(); 
             driver = new FirefoxDriver();
         }
        else if(browserList ==BrowserList.H_FIREFOX) {
@@ -85,7 +87,7 @@ public class BaseTest {
         }
 
         else {
-            throw new RuntimeException("Browser name invalid.");
+            throw new BrowserNotSupport(browserName);
         }
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
