@@ -547,6 +547,6 @@ public class BasePage extends BasePageUI {
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
 
-	private long LongTimeout = 30;
+	private long LongTimeout = GlobalConstant.LONG_TIMEOUT;
 
 }

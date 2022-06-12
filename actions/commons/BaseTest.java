@@ -72,7 +72,13 @@ public class BaseTest {
             WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
 
             ChromeOptions options = new ChromeOptions();
-            options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+            if(GlobalConstant.OS_NAME.startsWith("Window")) {
+            	 options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+            }
+            else {
+            	 options.setBinary("...");
+            }
+           
             driver = new ChromeDriver(options);
 
         }
@@ -90,7 +96,7 @@ public class BaseTest {
             throw new BrowserNotSupport(browserName);
         }
 
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(GlobalConstant.LONG_TIMEOUT, TimeUnit.SECONDS);
         //Mở Url nó qua trang  HomePage
       driver.get(GlobalConstant.PORTAL_TESTING_URL);
         
@@ -164,7 +170,7 @@ public class BaseTest {
 	        	throw new RuntimeException("Browser name invalid");
 	        }
 		
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(GlobalConstant.LONG_TIMEOUT, TimeUnit.SECONDS);
 			driver.get(getEnvironmentUrl(environmentName));
 			return driver;
 
