@@ -105,7 +105,7 @@ public class BaseTest {
 
     }
     
- protected WebDriver getBrowserDriver(String browserName, String environmentName) {
+ protected WebDriver getBrowserDriver(String browserName, String appUrl) {
     	
 	 	if(browserName.equals("firefox")) {
 	 		WebDriverManager.firefoxdriver().setup();
@@ -171,14 +171,14 @@ public class BaseTest {
 	        }
 		
 			driver.manage().timeouts().implicitlyWait(GlobalConstant.LONG_TIMEOUT, TimeUnit.SECONDS);
-			driver.get(getEnvironmentUrl(environmentName));
+			driver.get(appUrl);
 			return driver;
 
 
     }
     
     
-    private  String getEnvironmentUrl(String serverName) {
+    protected  String getEnvironmentUrl(String serverName) {
     	String envUrl = null;
     	EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
     	if(environment == EnvironmentList.DEV) {
@@ -197,6 +197,8 @@ public class BaseTest {
     	
     	return envUrl;
     }
+    
+    
     
 	protected int generateFakeNumber() {
 		Random rd = new Random();
