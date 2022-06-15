@@ -56,7 +56,7 @@ public class BasePage extends BasePageUI {
 
 	}
 
-	public void refeshCurrentPage(WebDriver driver) {
+	public void refreshCurrentPage(WebDriver driver) {
 		driver.navigate().refresh();
 	}
 

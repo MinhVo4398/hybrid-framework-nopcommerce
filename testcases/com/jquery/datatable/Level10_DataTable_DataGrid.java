@@ -45,8 +45,21 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		homePage.sleepInSecond(3);
 	}
 	@Test
-	public void Table_02() {
+	public void Table_02_Enter_To() {
+		// refresh để tránh dữ liệu bị cache lại
+		homePage.refreshCurrentPage(driver);
 		
+		homePage.enterToHeaderTextBoxByLabel("Country", "Argentina");
+		homePage.enterToHeaderTextBoxByLabel("Females", "338282");
+		homePage.enterToHeaderTextBoxByLabel("Males", "349238");
+		homePage.enterToHeaderTextBoxByLabel("Total", "687522");
+		homePage.sleepInSecond(3);
+		
+		homePage.enterToHeaderTextBoxByLabel("Country", "Angola");
+		homePage.enterToHeaderTextBoxByLabel("Females", "276880");
+		homePage.enterToHeaderTextBoxByLabel("Males", "276472");
+		homePage.enterToHeaderTextBoxByLabel("Total", "553353");
+		homePage.sleepInSecond(3);
 	}
 	
 	
