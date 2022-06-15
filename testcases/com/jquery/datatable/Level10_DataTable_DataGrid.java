@@ -9,16 +9,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
-import pageObjects.nopCommerce.user.UserAddressPageObject;
-import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
-import pageObjects.nopCommerce.user.UserHomePageObject;
-import pageObjects.nopCommerce.user.UserLoginPageObject;
-import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
-import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+
+import pageObjects.jQuery.PageGeneratorManager;
+import pageObjects.jQuery.HomePageObject;
+
 
 public class Level10_DataTable_DataGrid extends BaseTest {
+	
+	HomePageObject homePage;
 	//Declare
 	private WebDriver driver;
 
@@ -27,15 +25,24 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		driver = getBrowserDriver(browserName, appUrl);
-	
+		//driver lấy xong ở hàm trên map vô getHomePage
+		homePage = PageGeneratorManager.getHomePage(driver);
 		
-	
 	}
 
 	@Test
-	public void Table_01() {
+	public void Table_01_Paging() {
+		homePage.openPagingByPageNumber("10");
+		homePage.sleepInSecond(3);
 		
-	
+		homePage.openPagingByPageNumber("20");
+		homePage.sleepInSecond(3);
+		
+		homePage.openPagingByPageNumber("7");
+		homePage.sleepInSecond(3);
+		
+		homePage.openPagingByPageNumber("18");
+		homePage.sleepInSecond(3);
 	}
 	@Test
 	public void Table_02() {
@@ -43,17 +50,7 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 	}
 	
 	
-	@Test
-	public void User_03_Dynamic_Page_01() {
 		
-	}
-	
-	@Test
-	public void User_03_Dynamic_Page_02() {
-		
-		
-		
-	}
 
 
 

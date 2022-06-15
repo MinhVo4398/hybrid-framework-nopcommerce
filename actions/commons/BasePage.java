@@ -461,6 +461,8 @@ public class BasePage extends BasePageUI {
 
 	public void waitForElementClickable(WebDriver driver, String locatorType, String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, LongTimeout);
+		//locatorType = xpath=//li[@class='qgrd-pagination-page']/a[text()='%s
+		// dynamicValues = 10
 		explicitWait.until(
 				ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
