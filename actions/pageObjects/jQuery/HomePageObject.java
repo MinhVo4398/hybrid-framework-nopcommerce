@@ -1,8 +1,10 @@
 package pageObjects.jQuery;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -43,8 +45,10 @@ public class HomePageObject extends BasePage {
 	public List<String> getValueEachRowAtAllPage() {
 		int totalPage = getElementSize(driver, HomePageUI.TOTAL_PAGINATION);
 		System.out.println("Total size =" + totalPage);
-		// Khai báo 1 ArayList
+		// Khai báo 1 List
 		List<String> allRowValuesAllPage = new ArrayList<String>();
+		// Dùng Set khi chỉ muốn lấy ra value duy nhất, ko bị trùng
+		Set<String> allRowValueUniueAllPage = new HashSet<String>();
 		
 		//  Dùng vòng lặp duyệt qua tất cả các page number(paging), ko có page 0
 		for (int index = 1; index <= totalPage; index++) {
@@ -53,7 +57,11 @@ public class HomePageObject extends BasePage {
 			sleepInSecond(1);
 			
 			//Get text của all row mỗi page đưa vào cái ArrayList
-			List<WebElement> allRowElementEachPage = getListWebElement(driver, HomePageUI.ALL_ROW_EACH_PAGE);
+		//	List<WebElement> allRowElementEachPage = getListWebElement(driver, HomePageUI.ALL_ROW_EACH_PAGE);
+			
+			// Trường hợp chỉ muốn lấy ra country mỗi row thôi
+			List<WebElement> allRowElementEachPage = getListWebElement(driver, HomePageUI.ALL_ROW_COUNTRY_EACH_PAGE);
+			
 			for (WebElement eachRow : allRowElementEachPage) {
 				allRowValuesAllPage.add(eachRow.getText());// getTex mỗi row lưu vào list
 				//eachRow.getText(); // getTex mỗi row lưu vào list
@@ -63,7 +71,7 @@ public class HomePageObject extends BasePage {
 		}
 		// In tất cả giá trị row ra- tất cả các page 
 		for (String value : allRowValuesAllPage) {
-			System.out.println("---------------");
+		//	System.out.println("---------------");
 			System.out.println(value);
 			
 		}
