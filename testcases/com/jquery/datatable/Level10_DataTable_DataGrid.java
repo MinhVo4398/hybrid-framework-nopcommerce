@@ -9,9 +9,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-
-import pageObjects.jQuery.PageGeneratorManager;
 import pageObjects.jQuery.HomePageObject;
+import pageObjects.jQuery.PageGeneratorManager;
 
 
 public class Level10_DataTable_DataGrid extends BaseTest {
@@ -30,21 +29,26 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		
 	}
 
-	@Test
+	
 	public void Table_01_Paging() {
 		homePage.openPagingByPageNumber("10");
-		homePage.sleepInSecond(3);
+		homePage.sleepInSecond(1); 
+		// Dựa vào sự thay đổi ở element html để verify cho phù hợp
+		Assert.assertTrue(homePage.isPageNumberActived("10"));
 		
 		homePage.openPagingByPageNumber("20");
-		homePage.sleepInSecond(3);
+		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("20"));
 		
 		homePage.openPagingByPageNumber("7");
-		homePage.sleepInSecond(3);
+		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("7"));
 		
 		homePage.openPagingByPageNumber("18");
-		homePage.sleepInSecond(3);
+		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("18"));
 	}
-	@Test
+	
 	public void Table_02_Enter_To() {
 		// refresh để tránh dữ liệu bị cache lại
 		homePage.refreshCurrentPage(driver);
@@ -62,6 +66,10 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		homePage.sleepInSecond(3);
 	}
 	
+	@Test
+	public void Table_03_Enter_To_Header() {
+		homePage.getValueEachRowAtAllPage();
+	}
 	
 		
 
