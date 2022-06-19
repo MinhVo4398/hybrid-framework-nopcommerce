@@ -94,33 +94,33 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		homePage.clickToLoadButton();
 		homePage.sleepInSecond(5);
 		
-//		homePage.enterToTextboxByColumnNameAtRowNumber("Album","2", "Micheal 97");	
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.enterToTextboxByColumnNameAtRowNumber("Artist","4", "Micheal Jackson");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.enterToTextboxByColumnNameAtRowNumber("Year","3", "1997");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.enterToTextboxByColumnNameAtRowNumber("Price","1", "150");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","5","Japan");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Hong Kong");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","US");
-//		homePage.sleepInSecond(3);
-//		
-//		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","3");
-//		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","5");
-//		
-//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","1");
-//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","2");
-//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","4");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Album","2", "Micheal 97");	
+		homePage.sleepInSecond(3);
+		
+		homePage.enterToTextboxByColumnNameAtRowNumber("Artist","4", "Micheal Jackson");
+		homePage.sleepInSecond(3);
+		
+		homePage.enterToTextboxByColumnNameAtRowNumber("Year","3", "1997");
+		homePage.sleepInSecond(3);
+		
+		homePage.enterToTextboxByColumnNameAtRowNumber("Price","1", "150");
+		homePage.sleepInSecond(3);
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","5","Japan");
+		homePage.sleepInSecond(3);
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Hong Kong");
+		homePage.sleepInSecond(3);
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","US");
+		homePage.sleepInSecond(3);
+		
+		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","3");
+		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","5");
+		
+		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","1");
+		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","2");
+		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","4");
 		
 		homePage.clickToIconByRowNumber("1","Remove Current Row");
 		homePage.sleepInSecond(2);
