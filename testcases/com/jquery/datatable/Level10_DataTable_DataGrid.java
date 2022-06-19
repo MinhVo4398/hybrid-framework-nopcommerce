@@ -90,19 +90,55 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		// Row number:tại row nào  - tham số 2
 		//Ex: Nhập vào textbox tại dòng số 3/5/7
 		// Value để nhập dữ liệu (Micheal 97( - tham số 3 )
-		homePage.enterToTextboxByColumnNameAtRowNumber("Album","1", "Micheal 97");
-		homePage.enterToTextboxByColumnNameAtRowNumber("Artist","1", "Micheal Jackson");
-		homePage.enterToTextboxByColumnNameAtRowNumber("Year","1", "1997");
-		homePage.enterToTextboxByColumnNameAtRowNumber("Price","1", "15");
 		
-		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Japan");
-		homePage.sleepInSecond(3);
+		homePage.clickToLoadButton();
+		homePage.sleepInSecond(5);
 		
-		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Hong Kong");
-		homePage.sleepInSecond(3);
+//		homePage.enterToTextboxByColumnNameAtRowNumber("Album","2", "Micheal 97");	
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.enterToTextboxByColumnNameAtRowNumber("Artist","4", "Micheal Jackson");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.enterToTextboxByColumnNameAtRowNumber("Year","3", "1997");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.enterToTextboxByColumnNameAtRowNumber("Price","1", "150");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","5","Japan");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Hong Kong");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","US");
+//		homePage.sleepInSecond(3);
+//		
+//		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","3");
+//		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?","5");
+//		
+//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","1");
+//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","2");
+//		homePage.uncheckToCheckBoxByColumnNameAtRowNumber("With Poster?","4");
 		
-		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","US");
-		homePage.sleepInSecond(3);
+		homePage.clickToIconByRowNumber("1","Remove Current Row");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("1","Insert Row Above");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("3","Move Up");
+		homePage.sleepInSecond(2);
+		
+		homePage.clickToIconByRowNumber("5","Remove Current Row");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("4","Remove Current Row");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("3","Remove Current Row");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("2","Remove Current Row");
+		homePage.sleepInSecond(2);
+		homePage.clickToIconByRowNumber("1","Remove Current Row");
+		homePage.sleepInSecond(2);
 	}
 	
 

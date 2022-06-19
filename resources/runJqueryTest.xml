@@ -3,7 +3,7 @@
 
 <parameter name ="url" value ="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid//" />
 
-    <test name="Run on FIREFOX">
+    <test name="Run on CHROME">
         <parameter name ="browser" value ="chrome" />
         <classes>
             <class name="com.jquery.datatable.Level10_DataTable_DataGrid"/>
