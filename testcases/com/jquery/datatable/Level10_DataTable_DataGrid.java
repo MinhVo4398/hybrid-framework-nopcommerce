@@ -70,8 +70,9 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 		homePage.sleepInSecond(3);
 	}
 	
-	@Test
+	
 	public void Table_03_Enter_To_Header() {
+		// YC: Lấy ra tất cả row hoặc 1 row hoặc 1 tiêu chí 1 cột nào đó thôi (dựa vào locator để lọc ra)
 		// Đọc dữ liệu của file country.txt ra
 		// Lưu vào 1 List<String> =Expected value =expectedAllCountryValues
 		
@@ -81,12 +82,34 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 	}
 	
 		
-
+	@Test
+	public void Table_04_Action_At_Any_Row() {
+		//demo trên trang https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/
+		// Nhâp value tại cột nào đó và dòng nào đó bất kì
+		// Column name:Album /Artist /Year - tham số 1
+		// Row number:tại row nào  - tham số 2
+		//Ex: Nhập vào textbox tại dòng số 3/5/7
+		// Value để nhập dữ liệu (Micheal 97( - tham số 3 )
+		homePage.enterToTextboxByColumnNameAtRowNumber("Album","1", "Micheal 97");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Artist","1", "Micheal Jackson");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Year","1", "1997");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Price","1", "15");
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Japan");
+		homePage.sleepInSecond(3);
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","Hong Kong");
+		homePage.sleepInSecond(3);
+		
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin","1","US");
+		homePage.sleepInSecond(3);
+	}
+	
 
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 
 	}
 

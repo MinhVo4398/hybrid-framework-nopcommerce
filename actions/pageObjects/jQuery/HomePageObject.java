@@ -77,6 +77,29 @@ public class HomePageObject extends BasePage {
 		}
 		return allRowValuesAllPage;
 	}
+
+	public void enterToTextboxByColumnNameAtRowNumber(String columnName, String rowNumber, String valueEnter) {
+		// dynamic Xpath - tham số dynamic là columnName (Album)
+		// //tr/td[text()='%s']/preceding-sibling::td , có 1 thằng anh (td) ==> +1 sẽ ra index của nó 
+		// Lấy ra Column index dựa vào tên cột
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) +1;
+		
+		// Sendkey vào dòng nào
+		waitForElementVisible(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		sendkeyToElement(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, valueEnter, rowNumber,String.valueOf(columnIndex) );
+		
+	}
+
+	public void selectDropdownByColumnNameAtRowNumber(String columnName, String rowNumber, String valueSelect) {
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) +1;
+		
+		waitForElementClickable(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		selectItemInDefaultDropdown(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueSelect, rowNumber, String.valueOf(columnIndex));
+		
+		
+		
+		
+	}
 	
 	
 
