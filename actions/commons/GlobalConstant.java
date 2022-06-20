@@ -40,5 +40,8 @@ public class GlobalConstant {
 	public static final long LONG_TIMEOUT = 30;
 	public static final long RETRY_TEST_FAIL = 3;
 	
+	// Trang Admin LivetechPanda
+	public static final String ADMIN_LIVETECH_PANDA ="http://live.techpanda.org/index.php/backendlogin/customer/";
+	
 	
 }

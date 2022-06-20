@@ -12,11 +12,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.techpanda.AccountDashboardPageObject;
-import pageObjects.techpanda.HomePageObject;
-import pageObjects.techpanda.LoginPageObject;
-import pageObjects.techpanda.PageGenerator;
-import pageObjects.techpanda.RegisterPageObject;
+import commons.GlobalConstant;
+import pageObects.techpanda.admin.AdminCustomerPageObject;
+import pageObects.techpanda.admin.AdminLoginPageObject;
+import pageObjects.techpanda.user.UserAccountDashboardPageObject;
+import pageObjects.techpanda.user.UserHomePageObject;
+import pageObjects.techpanda.user.UserLoginPageObject;
+import pageObjects.techpanda.user.PageGenerator;
+import pageObjects.techpanda.user.UserRegisterPageObject;
 
 
 
@@ -26,10 +29,12 @@ public class LiveTech extends BaseTest {
 	
 	//Declare
 	private WebDriver driver;
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	RegisterPageObject registerPage;
-	AccountDashboardPageObject accountDashboardPage;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserAccountDashboardPageObject accountDashboardPage;
+	AdminLoginPageObject adminLoginPage;
+	AdminCustomerPageObject adminCustomerPage;
 
 	@Parameters({"browser", "url"})
 	@BeforeClass
@@ -71,13 +76,29 @@ public class LiveTech extends BaseTest {
 		
 		
 	}
-	
+	@Test
+	public void TC_02_Handle_Data() {
+		String userName = "user01";
+		String password ="guru99com";
+		
+		accountDashboardPage.openPageUrl(driver, GlobalConstant.ADMIN_LIVETECH_PANDA);
+		// open ra trang Admin -> Khởi tạo trang Admin Login ra
+		adminLoginPage = PageGenerator.getAdminLoginPage(driver);
+		
+		adminLoginPage.inputToUserNameTextBox(userName);
+		adminLoginPage.inputToPasswordTextBox(password);
+		
+		// adminloginPage click Login --> AdminCustomerPage
+		adminCustomerPage =	adminLoginPage.openCustomerPage();
+		
+		
+	}
 	
 
 
 	@AfterClass
 	public void afterClass() {
-	//	driver.quit();
+	//driver.quit();
 
 	}
 
