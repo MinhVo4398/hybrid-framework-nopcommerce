@@ -29,7 +29,8 @@ public class AdminLoginPageObject extends BasePage {
 	public AdminCustomerPageObject openCustomerPage() {
 		waitForElementClickable(driver, AdminLoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, AdminLoginPageUI.LOGIN_BUTTON);
-		return PageGenerator.getCustomerPage(driver);
+		// open ra trang Admin Customer Page
+		return PageGenerator.getAdminCustomerPage(driver);
 		
 	}
 	

@@ -24,7 +24,7 @@ public class PageGenerator {
 		return new AdminLoginPageObject(driver);
 	}
 	
-	public static AdminCustomerPageObject getCustomerPage(WebDriver driver) {
+	public static AdminCustomerPageObject getAdminCustomerPage(WebDriver driver) {
 		return new AdminCustomerPageObject(driver);
 	}
 }

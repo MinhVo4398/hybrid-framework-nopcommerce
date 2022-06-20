@@ -77,7 +77,7 @@ public class LiveTech extends BaseTest {
 		
 	}
 	@Test
-	public void TC_02_Handle_Data() {
+	public void TC_02_Login_To_Admin_Page() {
 		String userName = "user01";
 		String password ="guru99com";
 		
@@ -88,12 +88,22 @@ public class LiveTech extends BaseTest {
 		adminLoginPage.inputToUserNameTextBox(userName);
 		adminLoginPage.inputToPasswordTextBox(password);
 		
-		// adminloginPage click Login --> AdminCustomerPage
+		// adminloginPage click Login --> AdminCustomerPage 
 		adminCustomerPage =	adminLoginPage.openCustomerPage();
 		
 		
 	}
 	
+	@Test
+	public void TC_03_Handle_Table_In_Admin_CustomerPage() {
+		adminCustomerPage.closePopUp();
+		adminCustomerPage.enterToHeaderTextBoxByLabel("Email",emailAddress);
+		adminCustomerPage.sleepInSecond(3)	;
+		adminCustomerPage.clickToSearchButton();
+		adminCustomerPage.sleepInSecond(3)	;
+		
+		//Assert.assertTrue(adminCustomerPage.checkNameAndEmailDisplay());
+	}
 
 
 	@AfterClass
