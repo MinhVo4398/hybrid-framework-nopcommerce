@@ -8,4 +8,11 @@ public class AdminCustomnerPageUI {
 		public static final String SEARCH_BUTTON ="xpath=//button[@title='Search']";
 		
 		public static final String NAME_AND_EMAIL ="xpath=//td[contains(text(),'%s')]/following-sibling::td[contains(text(),'%s')]";
+		
+		public static final String CHECKBOX_BY_NAME ="xpath=//td[contains(text(),'%s')]/preceding-sibling::td/input";
+		
+		public static final String ACTION_BY_NAME ="xpath=//label[text()='Actions']/following-sibling::select";
+		
+		public static final String SUBMIT_BUTTON ="xpath=//span[text()='Submit']";
+		
 }

@@ -40,8 +40,8 @@ public class LiveTech extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		emailAddress = "afc"+ generateFakeNumber() + "@mail.com";
-		firstName = "Minh";
-		lastName ="Vo";
+		firstName = "Jonny1";
+		lastName ="DeepFake1";
 		passWord ="123456789";
 		confirmPassword ="123456789";
 		
@@ -59,9 +59,9 @@ public class LiveTech extends BaseTest {
 		//loginPage click CreateAnAccountButton -> RegisterPage
 		registerPage =	loginPage.clickToCreateAnAccountButton();
 		
-		registerPage.inputToFirstNameTextBox("Minh");
+		registerPage.inputToFirstNameTextBox(firstName);
 		registerPage.sleepInSecond(2);
-		registerPage.inputToLastNameTextBox("Vo");
+		registerPage.inputToLastNameTextBox(lastName);
 		registerPage.sleepInSecond(2);
 		registerPage.inputToEmailTextBox(emailAddress);
 		registerPage.sleepInSecond(2);
@@ -102,7 +102,11 @@ public class LiveTech extends BaseTest {
 		adminCustomerPage.clickToSearchButton();
 		adminCustomerPage.sleepInSecond(3)	;
 		
-		//Assert.assertTrue(adminCustomerPage.checkNameAndEmailDisplay());
+		Assert.assertTrue(adminCustomerPage.checkNameAndEmailDisplay(firstName, emailAddress));
+		adminCustomerPage.tickToCheckBox(firstName);
+		adminCustomerPage.actionByName("Delete");
+		adminCustomerPage.clickToSubmitButton();
+		adminCustomerPage.clickToAcceptAlert();
 	}
 
 
