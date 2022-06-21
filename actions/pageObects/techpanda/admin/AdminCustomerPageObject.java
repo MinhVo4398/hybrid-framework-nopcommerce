@@ -60,6 +60,10 @@ public class AdminCustomerPageObject extends BasePage {
 		waitForAlertPresent(driver);
 		accepptAlert(driver);
 	}
+
+	public boolean checkTotalRecordsMessageDisplay() {
+		return isElementDisplayed(driver, AdminCustomnerPageUI.TOTAL_RECORDS_MESSAGE );
+	}
 	
 	
 }

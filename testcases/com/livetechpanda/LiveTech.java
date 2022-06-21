@@ -107,6 +107,8 @@ public class LiveTech extends BaseTest {
 		adminCustomerPage.actionByName("Delete");
 		adminCustomerPage.clickToSubmitButton();
 		adminCustomerPage.clickToAcceptAlert();
+		
+		Assert.assertTrue(adminCustomerPage.checkTotalRecordsMessageDisplay());
 	}
 
 

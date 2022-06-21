@@ -15,4 +15,6 @@ public class AdminCustomnerPageUI {
 		
 		public static final String SUBMIT_BUTTON ="xpath=//span[text()='Submit']";
 		
+		public static final String TOTAL_RECORDS_MESSAGE ="xpath=//span[text()='Total of 1 record(s) were deleted.']";
+		
 }
