@@ -491,7 +491,12 @@ public class BasePage extends BasePageUI {
 		explicitWait.until(
 				ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
-
+	
+	// Upload Multiple File
+	
+	
+	
+	
 	// Tối ưu ở bài học Level_07_Switch_Page
 
 	public UserAddressPageObject openAddressPage(WebDriver driver) {
