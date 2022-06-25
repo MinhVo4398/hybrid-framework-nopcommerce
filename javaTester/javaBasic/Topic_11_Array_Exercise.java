@@ -2,6 +2,8 @@ package javaBasic;
 
 import org.testng.annotations.Test;
 
+import commons.GlobalConstant;
+
 public class Topic_11_Array_Exercise {
 	int[] number = {5,8,15,60,10};
 	@Test
@@ -58,5 +60,18 @@ public class Topic_11_Array_Exercise {
 			System.out.println("Sum all number = "+ sum);
 			System.out.println("Avarage all number = "+ sum/number.length);
 		}
-
+		
+	@Test
+	public void TC_06() {
+		String filePath = GlobalConstant.UPLOAD_FILE;
+		String fullFileName ="";
+		String [] fileNames ={"CScharp.jpg","Java.png","Python.png"};
+		for (String file : fileNames) {
+			fullFileName = fullFileName +filePath + file +"\n";
+			
+		}
+		fullFileName =fullFileName.trim();
+		System.out.println(fullFileName);
+	}
+	
 }

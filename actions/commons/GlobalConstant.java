@@ -16,7 +16,7 @@ public class GlobalConstant {
 	public static final String OS_NAME = System.getProperty("os.name");
 	
 	//Windows / MAC / Linux
-	public static final String UPLOAD_FILE= PROJECT_PATH + File.separator + "uploadFiles";
+	public static final String UPLOAD_FILE= PROJECT_PATH + File.separator + "uploadFiles" +  File.separator;
 	
 	//Trỏ về thư mục mặc định của User
 	//Window : Downloads

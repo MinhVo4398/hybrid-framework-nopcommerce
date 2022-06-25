@@ -9,7 +9,15 @@
             <class name="com.jquery.Level_11_Upload_Files"/>
         </classes>
     </test>
-	
+    
+   <test name="Run on EDGE">
+        <parameter name ="browser" value ="edge" />
+        <classes>
+            <class name="com.jquery.Level_11_Upload_Files"/>
+        </classes>
+    </test>
+    
+    
 	
   
 
