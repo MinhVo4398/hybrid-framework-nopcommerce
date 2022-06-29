@@ -175,6 +175,7 @@ public class BasePage extends BasePageNopCommerceUI {
 			// info'];
 
 		}
+		
 
 		
 
