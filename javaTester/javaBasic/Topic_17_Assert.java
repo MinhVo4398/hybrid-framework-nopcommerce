@@ -8,11 +8,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import commons.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Topic_17_Assert {
+@Listeners(commons.MethodListener.class)
+public class Topic_17_Assert extends BaseTest {
 		WebDriver driver;
 		
 		@BeforeClass
@@ -26,19 +29,34 @@ public class Topic_17_Assert {
 		
 		@Test
 		public void TC_01_ValidateCurrentUrl() {
-			System.out.println("Assert 01");
+			System.out.println("Assert 01 - Pass");
 			
 			String loginPageUrl = driver.getCurrentUrl();
-			Assert.assertEquals(loginPageUrl, "https://www.facebook.com/");
+//			Assert.assertEquals(loginPageUrl, "https://www.facebook.com/");
+			verifyEquals(loginPageUrl, "https://www.facebook.com/");
 			
-			System.out.println("Assert 02");
+			System.out.println("Assert 02 - Failed");
 			
 			String loginPageTitle = driver.getTitle();
-			Assert.assertEquals(loginPageTitle, "Facebook – log in or sign up");
+//			Assert.assertEquals(loginPageTitle, "Facebook – log in or sign up");
+			verifyEquals(loginPageTitle, "Facebook – log in or sign up...");
 			
-			System.out.println("Assert 03");
 			
-			Assert.assertTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
+			System.out.println("Assert 03 - Pass");
+			
+//			Assert.assertTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
+			verifyTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
+			
+			System.out.println("Assert 04 - Fail");
+			
+
+			verifyTrue(driver.findElement(By.xpath("//input[@name='login_source']")).isDisplayed());
+			
+			System.out.println("Assert 05 - Pass");
+			
+
+			verifyTrue(driver.findElement(By.xpath("//div[@id='reg_pages_msg']")).isDisplayed());
+			
 			
 		}
 		
