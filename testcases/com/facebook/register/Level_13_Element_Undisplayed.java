@@ -29,13 +29,23 @@ public class Level_13_Element_Undisplayed extends BaseTest {
 	@Test
 	public void TC_01_Verify_Element_Displayed() {
 		loginPage.clickToCreateNewAccountButton();
-		
+		// Nếu 1 cái hàm chỉ mong đợi verify element displayed thôi- kết hợp cả wait + isDisplay
+		//waitForElementVisible
+		//isElementDisplayed
 		verifyTrue(loginPage.isEmailAddressTextboxDisplayed());
 
 	}
 	@Test
 	public void TC_02_Verify_Element_Undisplayed_In_DOM() {
+		// Nếu như mình mong đợi 1 hàm vừa verify displayed / undisplayed thì k dc kết hợp wait
+		// Vì waitForElementVisible ko đúng trong trường hợp element undisplayed
 		
+		//Verify True - mong đợi Confirm Email display
+		
+		// Verify False - mong đợi Confirm Email Undisplayed
+		verifyFalse(loginPage.isConfirmEmailAddressTextboxDisplay());
+		
+	
 
 	}
 	@Test

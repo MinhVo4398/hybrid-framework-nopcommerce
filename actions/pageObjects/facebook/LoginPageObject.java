@@ -23,4 +23,10 @@ public class LoginPageObject extends BasePage {
 		waitForElementVisible(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
 		return isElementDisplayed(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
 	}
+
+	public boolean isConfirmEmailAddressTextboxDisplay() {
+		waitForElementVisible(driver, LoginPageUI.CONFIRM_EMAIL_TEXTBOX);
+		return isElementDisplayed(driver, LoginPageUI.CONFIRM_EMAIL_TEXTBOX);
+		
+	}
 }
