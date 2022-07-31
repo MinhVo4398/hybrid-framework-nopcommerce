@@ -25,8 +25,21 @@ public class LoginPageObject extends BasePage {
 	}
 
 	public boolean isConfirmEmailAddressTextboxDisplay() {
-		waitForElementVisible(driver, LoginPageUI.CONFIRM_EMAIL_TEXTBOX);
+		// Ko hiển thị nên k thể wait dc
 		return isElementDisplayed(driver, LoginPageUI.CONFIRM_EMAIL_TEXTBOX);
+		
+	}
+
+	public void enterToEmailAddressTextbox(String emailAddress) {
+		waitForElementVisible(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
+		sendkeyToElement(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX, emailAddress);
+		
+	}
+
+	public void clickToCloseIconAtRegisterForm() {
+		waitForElementClickable(driver, LoginPageUI.CLOSE_ICON);
+		clickToElement(driver, LoginPageUI.CLOSE_ICON);
+		
 		
 	}
 }
