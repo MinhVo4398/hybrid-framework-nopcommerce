@@ -57,19 +57,29 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		log.info("Register - Step 01: Navigate to 'Register' page");		
 		registerPage= homePage.openRegisterPage(); // B= A.action
 		
-		log.info("Register - Step 02: Enter to firstname textbox with value");
+		log.info("Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'");
 		registerPage.inputToFirstNameTextbox(firstName);
+		
+		log.info("Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'");
 		registerPage.inputToLastNameTextbox(lastName);
+		
+		log.info("Register - Step 04: Enter to Email textbox with value is '" + firstName + "'");
 		registerPage.inputToEmailTextbox(emailAddress);
-		System.out.println(emailAddress);
+		
+		log.info("Register - Step 05: Enter to Password textbox with value is '" + firstName + "'");
 		registerPage.inputToPasswordTextbox(validPassword);
+		
+		log.info("Register - Step 06: Enter to Confirmpassword textbox with value is '" + firstName + "'");
 		registerPage.inputToConfirmPasswordTextbox(validPassword);
-
+		
+		log.info("Register - Step 07: Click to 'Register' button ");
 		registerPage.clickToRegisterButton();
 
 //		Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
+		log.info("Register - Step 08:  Verify Register success message is displayed");
 		verifyEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed....");
-
+		
+		log.info("Register - Step 09: Click to 'Log out' link ");
 		homePage =	registerPage.clickToLogoutLink();
 				
 	
@@ -78,21 +88,28 @@ public class Level_14_Log_ReportNG extends BaseTest {
 
 	@Test
 	public void User_02_Login() {
+		log.info("Login - Step 01: Navigate to Login Page ");
 		loginPage =	homePage.openLoginPage();
 		
+		log.info("Login - Step 02: Enter to Email textbox with value is '" + validPassword +"' ");
 		loginPage.inputToEmailTextbox(emailAddress);
+		
+		log.info("Login - Step 03: Enter to Email textbox ");
 		loginPage.inputToPasswordTextbox(validPassword);
-	
+		
+		log.info("Login - Step 04: Click to Login button ");
 		homePage = loginPage.clickToLoginButton();
 
-//		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());		
-		verifyFalse(homePage.isMyAccountLinkDisplayed());		 // check xem co loi ko
+
+		log.info("Login - Step 05: Verify 'My Account' link is displayed ");
+		verifyFalse(homePage.isMyAccountLinkDisplayed());		
 		
-				
+		log.info("Login - Step 06: Navigate to 'My Account' page ");		
 		customerInforPage = homePage.openMyAccountPage();
 		
-	// 	Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
-		verifyFalse(customerInforPage.isCustomerInforPageDisplayed());   // check xem co loi ko
+	
+		log.info("Login - Step 07: Verify 'Customer Infor' page is displayed ");
+		verifyFalse(customerInforPage.isCustomerInforPageDisplayed());   
 	}
 
 	@AfterClass
