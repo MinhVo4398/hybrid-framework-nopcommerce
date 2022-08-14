@@ -133,7 +133,7 @@ public class BasePage extends BasePageNopCommerceUI {
 
 	public By getByLocator(String locatorType) {
 		By by = null;
-		System.out.println("Locator type =" + locatorType);
+	//	System.out.println("Locator type =" + locatorType);
 
 		if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
 
@@ -164,7 +164,7 @@ public class BasePage extends BasePageNopCommerceUI {
 	// xpath=//div[contains(@class,'account-navigation')]//a[text()='%s']
 	// Customer info
 	public String getDynamicXpath(String locatorType, String... dynamicValues) {
-		System.out.println("Locator type before =" + locatorType);
+		//System.out.println("Locator type before =" + locatorType);
 		// xpath=//div[contains(@class,'account-navigation')]//a[text()='%s']
 
 		if (locatorType.startsWith("xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("Xpath=")
