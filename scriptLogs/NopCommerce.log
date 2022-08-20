@@ -236,3 +236,98 @@
 [2022-08-14 19:22:22,838] Login - Step 06: Navigate to 'My Account' page 
 [2022-08-14 19:22:23,350] Login - Step 07: Verify 'Customer Infor' page is displayed 
 [2022-08-14 19:22:23,394]  -------------------------- FAILED -------------------------- 
+[2022-08-20 11:33:27,403] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 11:33:27,971] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 11:33:28,104] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 11:33:28,217] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 11:33:28,343] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 11:33:28,455] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 11:33:28,574] Register - Step 07: Click to 'Register' button 
+[2022-08-20 11:33:29,382] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 11:33:29,444]  -------------------------- FAILED -------------------------- 
+[2022-08-20 11:33:29,561] Register - Step 09: Click to 'Log out' link 
+[2022-08-20 11:33:30,297] Login - Step 01: Navigate to Login Page 
+[2022-08-20 11:33:30,793] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-08-20 11:33:30,903] Login - Step 03: Enter to Email textbox 
+[2022-08-20 11:33:31,015] Login - Step 04: Click to Login button 
+[2022-08-20 11:33:31,717] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-08-20 11:33:31,780]  -------------------------- FAILED -------------------------- 
+[2022-08-20 11:33:31,780] Login - Step 06: Navigate to 'My Account' page 
+[2022-08-20 11:33:32,261] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-08-20 11:33:32,311]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:46:10,048] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 13:46:10,707] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 13:46:10,841] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 13:46:10,952] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 13:46:11,079] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 13:46:11,198] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 13:46:11,331] Register - Step 07: Click to 'Register' button 
+[2022-08-20 13:46:12,164] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 13:46:12,224]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:46:12,224] Register - Step 09: Click to 'Log out' link 
+[2022-08-20 13:46:12,961] Login - Step 01: Navigate to Login Page 
+[2022-08-20 13:46:13,454] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-08-20 13:46:13,566] Login - Step 03: Enter to Email textbox 
+[2022-08-20 13:46:13,676] Login - Step 04: Click to Login button 
+[2022-08-20 13:46:14,395] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-08-20 13:46:14,448]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:46:14,448] Login - Step 06: Navigate to 'My Account' page 
+[2022-08-20 13:46:14,975] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-08-20 13:46:15,024]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:52:46,534] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 13:52:47,122] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 13:52:47,252] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 13:52:47,370] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 13:52:47,495] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 13:52:47,609] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 13:52:47,722] Register - Step 07: Click to 'Register' button 
+[2022-08-20 13:52:48,546] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 13:52:48,610]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:52:48,611] Register - Step 09: Click to 'Log out' link 
+[2022-08-20 13:52:49,326] Login - Step 01: Navigate to Login Page 
+[2022-08-20 13:52:49,812] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-08-20 13:52:49,921] Login - Step 03: Enter to Email textbox 
+[2022-08-20 13:52:50,032] Login - Step 04: Click to Login button 
+[2022-08-20 13:52:50,732] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-08-20 13:52:50,782]  -------------------------- FAILED -------------------------- 
+[2022-08-20 13:52:50,782] Login - Step 06: Navigate to 'My Account' page 
+[2022-08-20 13:52:51,281] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-08-20 13:52:51,327]  -------------------------- FAILED -------------------------- 
+[2022-08-20 14:04:32,716] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 14:04:33,253] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 14:04:33,381] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 14:04:33,498] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 14:04:33,623] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 14:04:33,738] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 14:04:33,851] Register - Step 07: Click to 'Register' button 
+[2022-08-20 14:04:34,731] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 14:04:34,795]  -------------------------- FAILED -------------------------- 
+[2022-08-20 14:04:34,796] Register - Step 09: Click to 'Log out' link 
+[2022-08-20 14:04:35,534] Login - Step 01: Navigate to Login Page 
+[2022-08-20 14:04:36,024] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-08-20 14:04:36,132] Login - Step 03: Enter to Email textbox 
+[2022-08-20 14:04:36,240] Login - Step 04: Click to Login button 
+[2022-08-20 14:04:36,952] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-08-20 14:04:37,008]  -------------------------- FAILED -------------------------- 
+[2022-08-20 14:04:37,008] Login - Step 06: Navigate to 'My Account' page 
+[2022-08-20 14:04:37,502] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-08-20 14:04:37,551]  -------------------------- FAILED -------------------------- 
+[2022-08-20 16:46:30,607] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 16:46:31,257] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 16:46:31,399] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 16:46:31,515] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 16:46:31,638] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 16:46:31,750] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 16:46:31,871] Register - Step 07: Click to 'Register' button 
+[2022-08-20 16:46:32,660] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 16:46:32,728]  -------------------------- FAILED -------------------------- 
+[2022-08-20 16:46:32,728] Register - Step 09: Click to 'Log out' link 
+[2022-08-20 16:46:33,843] Login - Step 01: Navigate to Login Page 
+[2022-08-20 16:46:34,344] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-08-20 16:46:34,453] Login - Step 03: Enter to Email textbox 
+[2022-08-20 16:46:34,564] Login - Step 04: Click to Login button 
+[2022-08-20 16:46:35,257] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-08-20 16:46:35,307]  -------------------------- FAILED -------------------------- 
+[2022-08-20 16:46:35,307] Login - Step 06: Navigate to 'My Account' page 
+[2022-08-20 16:46:35,782] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-08-20 16:46:35,831]  -------------------------- FAILED -------------------------- 
