@@ -331,3 +331,21 @@
 [2022-08-20 16:46:35,307] Login - Step 06: Navigate to 'My Account' page 
 [2022-08-20 16:46:35,782] Login - Step 07: Verify 'Customer Infor' page is displayed 
 [2022-08-20 16:46:35,831]  -------------------------- FAILED -------------------------- 
+[2022-08-20 17:14:27,472] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 17:14:27,989] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 17:14:28,136] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 17:14:28,264] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 17:14:28,402] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 17:14:28,525] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 17:14:28,639] Register - Step 07: Click to 'Register' button 
+[2022-08-20 17:14:29,448] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 17:14:29,619] Login - Step 01: Navigate to Login Page 
+[2022-08-20 17:34:18,880] Register - Step 01: Navigate to 'Register' page
+[2022-08-20 17:34:19,512] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-08-20 17:34:19,648] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-08-20 17:34:19,769] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-08-20 17:34:19,895] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-08-20 17:34:20,010] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-08-20 17:34:20,121] Register - Step 07: Click to 'Register' button 
+[2022-08-20 17:34:20,947] Register - Step 08:  Verify Register success message is displayed
+[2022-08-20 17:34:21,135] Login - Step 01: Navigate to Login Page 
