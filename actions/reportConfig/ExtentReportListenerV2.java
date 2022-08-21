@@ -24,10 +24,10 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import commons.BaseTest;
 
-public class ExtentReportListenerV2 implements ITestListener  {
+public class ExtentReportListenerV2 extends BaseTest implements ITestListener  {
 	@Override
 	public void onStart(ITestContext context) {
-		
+		context.setAttribute("WebDriver", this.getDriverInstance());
 	}
 
 	@Override
