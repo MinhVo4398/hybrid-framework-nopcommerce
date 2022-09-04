@@ -42,22 +42,22 @@
 	<classpathentry kind="lib" path="libSelenium/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="libSelenium/testng-6.14.3.jar"/>
 	<classpathentry kind="lib" path="lib4J/commons-lang3-3.8.1.jar"/>
-	<classpathentry kind="lib" path="lib4J/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="lib4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager5/commons-lang-2.6.jar"/>
 	<classpathentry kind="lib" path="libReportNG/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/bsh-2.0b4.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/bson-3.3.0.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/extentreports-3.1.5.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV3/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libExtentV3/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/jcommander-1.48.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/mongodb-driver-3.3.0.jar"/>
-	<classpathentry kind="lib" path="libExtentV3/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libExtentV4/mongodb-driver-core-3.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
