@@ -561,7 +561,7 @@ public class BasePage extends BasePageNopCommerceUI {
 	// Upload Multiple File
 	public void uploadMultipleFiles(WebDriver driver, String...fileNames) {
 		// Đường dẫn của thư mục UploadFile: Windows/MAC/ Linux
-		String filePath = GlobalConstant.UPLOAD_FILE;
+		String filePath = GlobalConstants.UPLOAD_FILE;
 		
 		// Đường dẫn tất cả các file
 		//1 file: Java.png
@@ -661,7 +661,7 @@ public class BasePage extends BasePageNopCommerceUI {
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
 
-	private long longTimeout = GlobalConstant.LONG_TIMEOUT;
-	private long shortTimeout = GlobalConstant.SHORT_TIMEOUT;
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
+	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 
 }

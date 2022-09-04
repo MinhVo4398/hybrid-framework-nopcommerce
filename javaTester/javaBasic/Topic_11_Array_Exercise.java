@@ -2,7 +2,7 @@ package javaBasic;
 
 import org.testng.annotations.Test;
 
-import commons.GlobalConstant;
+import commons.GlobalConstants;
 
 public class Topic_11_Array_Exercise {
 	int[] number = {5,8,15,60,10};
@@ -63,7 +63,7 @@ public class Topic_11_Array_Exercise {
 		
 	@Test
 	public void TC_06() {
-		String filePath = GlobalConstant.UPLOAD_FILE;
+		String filePath = GlobalConstants.UPLOAD_FILE;
 		String fullFileName ="";
 		String [] fileNames ={"CScharp.jpg","Java.png","Python.png"};
 		for (String file : fileNames) {

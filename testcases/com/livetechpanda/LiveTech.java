@@ -12,7 +12,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import commons.GlobalConstant;
+import commons.GlobalConstants;
 import pageObects.techpanda.admin.AdminCustomerPageObject;
 import pageObects.techpanda.admin.AdminLoginPageObject;
 import pageObjects.techpanda.user.UserAccountDashboardPageObject;
@@ -81,7 +81,7 @@ public class LiveTech extends BaseTest {
 		String userName = "user01";
 		String password ="guru99com";
 		
-		accountDashboardPage.openPageUrl(driver, GlobalConstant.ADMIN_LIVETECH_PANDA);
+		accountDashboardPage.openPageUrl(driver, GlobalConstants.ADMIN_LIVETECH_PANDA);
 		// open ra trang Admin -> Khởi tạo trang Admin Login ra
 		adminLoginPage = PageGenerator.getAdminLoginPage(driver);
 		
