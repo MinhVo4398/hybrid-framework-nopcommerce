@@ -98,24 +98,24 @@ public class Level_15_ExtentV5 extends BaseTest {
 		homePage =	registerPage.clickToLogoutLink();
 		loginPage =	homePage.openLoginPage();
 		
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Input to email textbox " + emailAddress);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Input to email textbox " + emailAddress);
 		loginPage.inputToEmailTextbox(emailAddress);
 		
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Input to password textbox " + validPassword);
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Input to password textbox " + validPassword);
 		loginPage.inputToPasswordTextbox(validPassword);
 		
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Click to Login button ");
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Click to Login button ");
 		homePage = loginPage.clickToLoginButton();
 
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Verify My Account Link Displayed");
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 05: Verify My Account Link Displayed");
 		Assert.assertFalse(homePage.isMyAccountLinkDisplayed());		
 		
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 05: Open My Account page");
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 06: Open My Account page");
 		customerInforPage = homePage.openMyAccountPage();
 		
 	
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 06: Verify Customer page is displayed");
+		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 07: Verify Customer page is displayed");
 		Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());   
 		
 		
