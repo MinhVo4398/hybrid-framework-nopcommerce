@@ -1,5 +1,7 @@
 package reportConfig;
 
+import java.io.File;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,7 @@ import org.testng.ITestResult;
 
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import io.qameta.allure.Attachment;
 
 public class AllureTestListener implements ITestListener {
@@ -62,6 +65,23 @@ public class AllureTestListener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
+	}
+	
+	public void deleteAllFileInFolder() {
+		try {
+		
+			String pathFolderDownload = GlobalConstants.PROJECT_PATH + "/allure-json";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
 	}
 
 }

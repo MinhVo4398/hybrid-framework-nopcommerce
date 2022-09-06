@@ -119,7 +119,7 @@ public class Topic_12_String {
 
         helloWorldText = " ";
         System.out.println("Empty = "+ helloWorldText.isEmpty()); //false
-       System.out.println("Blank =" + helloWorldText.isBlank()); //true
+      // System.out.println("Blank =" + helloWorldText.isBlank()); //true
 
         // Dynamic locator
         // Đại diện cho 1 chuỗi: %s
