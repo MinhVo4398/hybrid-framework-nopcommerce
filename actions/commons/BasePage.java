@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -63,6 +64,19 @@ public class BasePage extends BasePageNopCommerceUI {
 
 	public void refreshCurrentPage(WebDriver driver) {
 		driver.navigate().refresh();
+	}
+	
+	public  void setCookies(WebDriver driver, Set<Cookie> cookies) {
+		for (Cookie cookie : cookies) {
+			driver.manage().addCookie(cookie);
+		}
+		sleepInSecond(3);
+		
+	}
+	
+	public  Set<Cookie> getAllCookies(WebDriver driver)  {
+		return driver.manage().getCookies();
+		
 	}
 
 	public Alert waitForAlertPresent(WebDriver driver) {

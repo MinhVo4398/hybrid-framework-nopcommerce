@@ -375,3 +375,19 @@
 [2022-08-21 07:41:20,331] Login - Step 03: Enter to Email textbox 
 [2022-08-21 07:41:20,440] Login - Step 04: Click to Login button 
 [2022-08-21 07:41:21,197] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-13 13:19:39,703] Login - Step 01: Navigate to Login Page 
+[2022-09-13 13:19:40,365] Login - Step 02: Enter to Email textbox with value is 'null' 
+[2022-09-13 13:25:55,826] Login - Step 01: Navigate to Login Page 
+[2022-09-13 13:25:56,352] Login - Step 02: Enter to Email textbox with value is 'afc7315@mail.vn' 
+[2022-09-13 13:25:56,511] Login - Step 03: Enter to Email textbox 
+[2022-09-13 13:25:56,675] Login - Step 04: Click to Login button 
+[2022-09-13 14:12:43,112] Login - Step 01: Navigate to Login Page 
+[2022-09-13 14:12:43,652] Login - Step 02: Enter to Email textbox with value is 'afc2991@mail.vn' 
+[2022-09-13 14:12:43,783] Login - Step 03: Enter to Email textbox 
+[2022-09-13 14:12:43,922] Login - Step 04: Click to Login button 
+[2022-09-13 15:28:37,135] Pre-Condition - Step 01: Navigate to Login Page 
+[2022-09-13 15:28:37,684] Pre-Condition - Step 02: Set cookie and reload page 
+[2022-09-13 15:32:05,997] Pre-Condition - Step 01: Navigate to Login Page 
+[2022-09-13 15:32:06,544] Pre-Condition - Step 02: Set cookie and reload page 
+[2022-09-13 15:32:09,634] Pre-Condition - Step 05: Verify 'My Account' link is displayed 
+[2022-09-13 15:32:10,076]  -------------------------- PASSED -------------------------- 

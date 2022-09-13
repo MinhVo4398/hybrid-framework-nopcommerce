@@ -17,8 +17,8 @@
         <parameter name ="browser" value ="chrome" />
         <classes>
         	<!-- Trigger Common Register run first -->
-        	 <class name="com.nopcommerce.common.Common_01_Register"/>
-            <class name="com.nopcommerce.user.Level_16_Share_Data"/>
+        	 <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>
+            <class name="com.nopcommerce.user.Level_16_Share_Data_C"/>
             <method name=""></method>
         </classes>
     </test>
