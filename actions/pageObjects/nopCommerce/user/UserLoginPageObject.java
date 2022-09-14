@@ -52,4 +52,10 @@ public class UserLoginPageObject extends BasePage {
 		inputToPasswordTextbox(password);
 		return clickToLoginButton();
 	}
+	
+	
+	public String getPracticeNameTextboxValue() {
+		waitForElementVisible(driver, LoginPageUI.STREET_ADDRESS_TEXTBOX);
+		return getElementValueByJSXpath(driver, LoginPageUI.STREET_ADDRESS_TEXTBOX);
+	}
 }

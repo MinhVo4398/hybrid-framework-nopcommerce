@@ -105,7 +105,7 @@ public class Common_01_Register_Cookie extends BaseTest {
 
 	
 	@AfterTest
-	public void afterClass() {
+	public void afterTest() {
 		driver.quit();
 
 	}

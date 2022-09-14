@@ -391,3 +391,74 @@
 [2022-09-13 15:32:06,544] Pre-Condition - Step 02: Set cookie and reload page 
 [2022-09-13 15:32:09,634] Pre-Condition - Step 05: Verify 'My Account' link is displayed 
 [2022-09-13 15:32:10,076]  -------------------------- PASSED -------------------------- 
+[2022-09-14 09:59:14,075] Pre-Condition - Step 01: Navigate to Login Page 
+[2022-09-14 09:59:14,767] Pre-Condition - Step 02: Set cookie and reload page 
+[2022-09-14 09:59:17,972] Pre-Condition - Step 05: Verify 'My Account' link is displayed 
+[2022-09-14 09:59:19,002]  -------------------------- PASSED -------------------------- 
+[2022-09-14 10:09:45,450] Pre-Condition - Step 01: Navigate to Login Page 
+[2022-09-14 10:09:45,983] Pre-Condition - Step 02: Set cookie and reload page 
+[2022-09-14 10:09:49,073] Pre-Condition - Step 05: Verify 'My Account' link is displayed 
+[2022-09-14 10:09:50,055]  -------------------------- PASSED -------------------------- 
+[2022-09-14 10:11:27,357] Pre-Condition - Step 01: Navigate to Login Page 
+[2022-09-14 10:11:27,901] Pre-Condition - Step 02: Set cookie and reload page 
+[2022-09-14 10:11:31,004] Pre-Condition - Step 05: Verify 'My Account' link is displayed 
+[2022-09-14 10:11:32,055]  -------------------------- PASSED -------------------------- 
+[2022-09-14 13:44:33,022] Register - Step 01: Navigate to 'Register' page
+[2022-09-14 13:44:33,646] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-14 13:44:33,792] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-14 13:44:33,916] Register - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-09-14 13:44:34,068] Register - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-09-14 13:44:34,212] Register - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-09-14 13:44:34,366] Register - Step 07: Click to 'Register' button 
+[2022-09-14 13:44:35,948] Register - Step 08:  Verify Register success message is displayed
+[2022-09-14 13:44:36,041]  -------------------------- FAILED -------------------------- 
+[2022-09-14 13:44:36,042] Register - Step 09: Click to 'Log out' link 
+[2022-09-14 13:44:36,971] Login - Step 01: Navigate to Login Page 
+[2022-09-14 13:44:37,504] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-14 13:44:37,636] Login - Step 03: Enter to Email textbox 
+[2022-09-14 13:44:37,766] Login - Step 04: Click to Login button 
+[2022-09-14 13:44:38,532] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-14 13:44:38,618]  -------------------------- PASSED -------------------------- 
+[2022-09-14 13:44:38,618] Login - Step 06: Navigate to 'My Account' page 
+[2022-09-14 13:44:39,118] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[2022-09-14 13:44:39,180]  -------------------------- FAILED -------------------------- 
+[2022-09-14 13:52:54,937] Pre-Condition - Step 01: Navigate to 'Register' page
+[2022-09-14 13:52:55,543] Pre-Condition - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-14 13:52:55,689] Pre-Condition - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-14 13:52:55,845] Pre-Condition - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-09-14 13:52:55,992] Pre-Condition - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-09-14 13:52:56,124] Pre-Condition - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-09-14 13:52:56,277] Pre-Condition - Step 07: Click to 'Register' button 
+[2022-09-14 13:52:57,802] Pre-Condition - Step 08:  Verify Register success message is displayed
+[2022-09-14 13:52:57,885]  -------------------------- FAILED -------------------------- 
+[2022-09-14 13:52:57,886] Pre-Condition - Step 09: Click to 'Log out' link 
+[2022-09-14 13:52:58,621] Pre-Condition - Step 10: Navigate to Login Page 
+[2022-09-14 13:52:59,158] Pre-Condition - Step 11: Enter to Email textbox with value is '123456' 
+[2022-09-14 13:52:59,305] Pre-Condition - Step 12: Enter to Email textbox 
+[2022-09-14 13:52:59,450] Pre-Condition - Step 13: Click to Login button 
+[2022-09-14 14:38:26,051] Pre-Condition - Step 01: Navigate to 'Register' page
+[2022-09-14 14:38:26,696] Pre-Condition - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-14 14:38:26,855] Pre-Condition - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-14 14:38:27,009] Pre-Condition - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-09-14 14:38:27,160] Pre-Condition - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-09-14 14:38:27,290] Pre-Condition - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-09-14 14:38:27,414] Pre-Condition - Step 07: Click to 'Register' button 
+[2022-09-14 14:38:29,019] Pre-Condition - Step 08:  Verify Register success message is displayed
+[2022-09-14 15:27:24,364] Pre-Condition - Step 01: Navigate to 'Register' page
+[2022-09-14 15:27:25,023] Pre-Condition - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-14 15:27:25,182] Pre-Condition - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-14 15:27:25,320] Pre-Condition - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-09-14 15:27:25,473] Pre-Condition - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-09-14 15:27:25,603] Pre-Condition - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-09-14 15:27:25,739] Pre-Condition - Step 07: Click to 'Register' button 
+[2022-09-14 15:27:27,311] Pre-Condition - Step 08:  Verify Register success message is displayed
+[2022-09-14 15:59:28,277] Pre-Condition - Step 01: Navigate to 'Register' page
+[2022-09-14 15:59:29,039] Pre-Condition - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-14 15:59:29,211] Pre-Condition - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-14 15:59:29,368] Pre-Condition - Step 04: Enter to Email textbox with value is 'Automation'
+[2022-09-14 15:59:29,532] Pre-Condition - Step 05: Enter to Password textbox with value is 'Automation'
+[2022-09-14 15:59:29,663] Pre-Condition - Step 06: Enter to Confirmpassword textbox with value is 'Automation'
+[2022-09-14 15:59:29,789] Pre-Condition - Step 07: Click to 'Register' button 
+[2022-09-14 15:59:31,320] Pre-Condition - Step 08:  Verify Register success message is displayed
+[2022-09-14 15:59:31,567] OS name = windows 10
+[2022-09-14 15:59:31,567] Driver instance name = chromedriver: chrome on windows (2f504bb860e15b5f659a5407ec5862ae)
