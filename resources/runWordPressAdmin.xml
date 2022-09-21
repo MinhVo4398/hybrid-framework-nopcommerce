@@ -11,20 +11,21 @@
 		
 	</listeners>
 	
-	<parameter name ="urlAdmin" value ="https://automationfc.net/wp-admin" />
-	<parameter name ="urlUser" value ="https://automationfc.net/" />
+	<parameter name ="urlAdmin" value ="https://localhost/wp-admin" />
+	<parameter name ="urlUser" value ="https://localhost" />
 	
     <test name="Run on CHROME">
         <parameter name ="browser" value ="chrome" />
         
-     <!--    <classes>
+       <classes>
             <class name="com.wordpress.admin.Post_01_Create_Read_Update_Delete_Search"/>
            
-        </classes> -->
+        </classes> 
         
-        <packages>
+   <!--      <packages>
         	<package name="com.wordpress.admin" />
-        </packages>
+        </packages> -->
+        
     </test>
 
   
