@@ -35,6 +35,11 @@ public class AdminPostAddNewPO extends BasePage {
 		
 	}
 
+	public void clickToPreBulishButton() {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.PRE_PUBLISH_BUTTON);
+		clickToElement(driver, AdminPostAddNewPageUI.PRE_PUBLISH_BUTTON);
+		
+	}
 	public boolean isPostPubishMessageDisplay(String postPublishedMessage) {
 		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
 		 return  isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
@@ -46,5 +51,7 @@ public class AdminPostAddNewPO extends BasePage {
 		return  PageGeneratorManager.getAdminPostSearchPage(driver);
 		
 	}
+
+	
 
 }
