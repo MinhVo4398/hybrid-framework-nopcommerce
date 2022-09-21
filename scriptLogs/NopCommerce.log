@@ -462,3 +462,89 @@
 [2022-09-14 15:59:31,320] Pre-Condition - Step 08:  Verify Register success message is displayed
 [2022-09-14 15:59:31,567] OS name = windows 10
 [2022-09-14 15:59:31,567] Driver instance name = chromedriver: chrome on windows (2f504bb860e15b5f659a5407ec5862ae)
+[2022-09-15 15:20:27,145] Register - Step 01: Navigate to 'Register' page
+[2022-09-15 15:20:27,721] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-15 15:20:27,886] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-15 15:20:28,040] Register - Step 04: Enter to Email textbox with value is 'afc6883@mail.vn'
+[2022-09-15 15:20:28,205] Register - Step 05: Enter to Password textbox with value is '123456'
+[2022-09-15 15:20:28,339] Register - Step 06: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-15 15:20:28,494] Register - Step 07: Click to 'Register' button 
+[2022-09-15 15:21:00,404] Login - Step 01: Navigate to Login Page 
+[2022-09-15 15:21:02,975] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-15 15:21:03,097] Login - Step 03: Enter to Password textbox 
+[2022-09-15 15:21:03,222] Login - Step 04: Click to Login button 
+[2022-09-15 15:21:03,986] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-15 15:21:04,068] OS name = windows 10
+[2022-09-15 15:21:04,068] Driver instance name = chromedriver: chrome on windows (f1a976dd7354fb19cc5c94556fde2b6f)
+[2022-09-15 15:23:04,311] Register - Step 01: Navigate to 'Register' page
+[2022-09-15 15:23:04,938] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-15 15:23:05,111] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-15 15:23:05,268] Register - Step 04: Enter to Email textbox with value is 'afc5784@mail.vn'
+[2022-09-15 15:23:05,429] Register - Step 05: Enter to Password textbox with value is '123456'
+[2022-09-15 15:23:05,627] Register - Step 06: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-15 15:23:05,774] Register - Step 07: Click to 'Register' button 
+[2022-09-15 15:23:07,424] Register - Step 08:  Verify Register success message is displayed
+[2022-09-15 15:23:07,582] Login - Step 01: Navigate to Login Page 
+[2022-09-15 15:23:08,919] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-15 15:23:09,048] Login - Step 03: Enter to Password textbox 
+[2022-09-15 15:23:09,189] Login - Step 04: Click to Login button 
+[2022-09-15 15:23:09,904] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-15 15:23:09,984] OS name = windows 10
+[2022-09-15 15:23:09,984] Driver instance name = chromedriver: chrome on windows (e617d6dce9067fab47a8d8aebc1eeda7)
+[2022-09-15 16:44:49,984] Register - Step 01: Navigate to 'Register' page
+[2022-09-15 16:44:50,706] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-15 16:44:50,854] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-15 16:44:50,978] Register - Step 04: Enter date, month , year
+[2022-09-15 16:44:51,411] Register - Step 05: Enter to Email textbox with value is 'afc6995@mail.vn'
+[2022-09-15 16:44:51,639] Register - Step 06: Enter to Password textbox with value is '123456'
+[2022-09-15 16:44:51,777] Register - Step 07: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-15 16:45:01,930] Register - Step 08: Click to 'Register' button 
+[2022-09-15 16:45:02,963] Register - Step 09:  Verify Register success message is displayed
+[2022-09-15 16:45:03,387] Login - Step 01: Navigate to Login Page 
+[2022-09-15 16:45:04,708] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-15 16:45:04,842] Login - Step 03: Enter to Password textbox 
+[2022-09-15 16:45:04,983] Login - Step 04: Click to Login button 
+[2022-09-15 16:45:05,740] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-15 16:45:05,806] OS name = windows 10
+[2022-09-15 16:45:05,806] Driver instance name = chromedriver: chrome on windows (950b4254f330fbc2b351a672e7779235)
+[2022-09-15 17:16:18,604] Register - Step 01: Navigate to 'Register' page
+[2022-09-15 17:16:19,390] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-15 17:16:19,540] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-15 17:16:19,693] Register - Step 04: Enter date, month , year
+[2022-09-15 17:16:20,125] Register - Step 05: Enter to Email textbox with value is 'afc2678@mail.vn'
+[2022-09-15 17:16:20,263] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-15 17:16:20,353] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-15 17:16:20,495] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-15 17:16:30,657] Register - Step 09: Click to 'Register' button 
+[2022-09-15 17:16:32,257] Register - Step 10:  Verify Register success message is displayed
+[2022-09-15 17:16:32,570] Login - Step 01: Navigate to Login Page 
+[2022-09-15 17:16:33,873] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-15 17:16:34,000] Login - Step 03: Enter to Password textbox 
+[2022-09-15 17:16:34,127] Login - Step 04: Click to Login button 
+[2022-09-15 17:16:34,881] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-15 17:16:34,963] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-15 17:16:35,586] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-15 17:16:35,704] OS name = windows 10
+[2022-09-15 17:16:35,704] Driver instance name = chromedriver: chrome on windows (c34a16f9032c52b471176b1396fea0d2)
+[2022-09-15 17:17:49,203] Register - Step 01: Navigate to 'Register' page
+[2022-09-15 17:17:49,938] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-15 17:17:50,099] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-15 17:17:50,247] Register - Step 04: Enter date, month , year
+[2022-09-15 17:17:50,679] Register - Step 05: Enter to Email textbox with value is 'afc5132@mail.vn'
+[2022-09-15 17:17:50,853] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-15 17:17:50,949] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-15 17:17:51,105] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-15 17:18:01,331] Register - Step 09: Click to 'Register' button 
+[2022-09-15 17:18:02,905] Register - Step 10:  Verify Register success message is displayed
+[2022-09-15 17:18:03,041] Login - Step 01: Navigate to Login Page 
+[2022-09-15 17:18:04,372] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-15 17:18:04,499] Login - Step 03: Enter to Password textbox 
+[2022-09-15 17:18:04,641] Login - Step 04: Click to Login button 
+[2022-09-15 17:18:05,405] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-15 17:18:05,486] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-15 17:18:06,000] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-15 17:18:06,075] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-15 17:18:06,134] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-15 17:18:06,197] My Account - Step 05: Verify 'Email ' value is displayed 
+[2022-09-15 17:18:06,265] OS name = windows 10
+[2022-09-15 17:18:06,265] Driver instance name = chromedriver: chrome on windows (3fb41102f5272d8c4881768ffc8b7c64)
