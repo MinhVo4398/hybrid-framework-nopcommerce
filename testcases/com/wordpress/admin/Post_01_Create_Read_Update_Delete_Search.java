@@ -24,7 +24,9 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	AdminPostSearchPO adminPostSearchPage;
 	AdminPostAddNewPO adminPostAddNewPage;
 	String searchPostUrl ;
-	
+	int randomNumber =  generateFakeNumber();
+	String postTitleValue ="Live Coding Title " + randomNumber;
+	String postBodyValue ="Live Coding Body " + randomNumber;
 	String adminUsername ="automationfc";
 	String adminPassword ="automationfc";
 	
@@ -38,13 +40,17 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		
 		log.info("Pre-Condition - Step 02: Enter to Username textbox with value : " + adminUsername);
+		adminLoginPage.enterToUserNameTextbox(adminUsername);
 		
 		log.info("Pre-Condition - Step 03: Enter to Password textbox with value :" + adminPassword);
-		
+		adminLoginPage.enterToPasswordTextbox(adminPassword);
 		
 		log.info("Pre-Condition - Step 04:	Click to Login button");
+		admninDashboardPage =	adminLoginPage.clickTologinButton();
 		
-		admninDashboardPage = PageGeneratorManager.getAdminDashboardPage(driver);
+	//	admninDashboardPage = PageGeneratorManager.getAdminDashboardPage(driver);  -> dua vao clicklogin, roi dung gián lại value, ko có việc khởi tạo trên TC nữa
+		
+		
 		
 		
 		
@@ -53,24 +59,31 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	@Test
 	public void Post_01_Create_New_Post() {
 		log.info("Create_Post - Step 01:Click to 'Post' menu link");
-		searchPostUrl ="";
+	
 		
-		adminPostSearchPage = PageGeneratorManager.getAdminPostSearchPage(driver);
+		adminPostSearchPage =	admninDashboardPage.clickToPostMenuLink();
 		
-		log.info("Create_Post - Step 02:Click to 'Add New' button ");
+	
+		log.info("Create_Post - Step 02: Get 'Search Posts' page Url");
+		searchPostUrl = adminPostSearchPage.getPageUrl(driver) ;  // lấy url của page hiện tại
 		
-		adminPostAddNewPage = PageGeneratorManager.getAdminPostAddNewPage(driver);
+		
+		log.info("Create_Post - Step 03:Click to 'Add New' button ");		
+		adminPostAddNewPage =	adminPostSearchPage.clickToAddNewButton();
 		
 		
 				
-		log.info("Create_Post - Step 03: Enter to post title ");
+		log.info("Create_Post - Step 04: Enter to post title ");
+		adminPostAddNewPage.enterToAddNewPostTitle(postTitleValue);
 		
-		log.info("Create_Post - Step 04: Enter to body ");
+		log.info("Create_Post - Step 05: Enter to body ");
+		adminPostAddNewPage.enterToAddNewPostBody(postBodyValue);
 		
-		log.info("Create_Post - Step 05: Click to 'Publish ' button ");
+		log.info("Create_Post - Step 06: Click to 'Publish ' button ");
+		adminPostAddNewPage.clickToPublishButton();
 		
-		log.info("Create_Post - Step 06: Verify 'Post published' message is displayed ");
-		
+	//	log.info("Create_Post - Step 07: Verify 'Post published' message is displayed ");
+	//	verifyTrue(adminPostAddNewPage.isPostPubishMessageDisplay("Post published."));
 		
 		
 		
@@ -81,8 +94,10 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	public void Post_02_Search_Post() {
 		log.info("Search_Post - Step 01: Open 'Search Post' page ");
 		// Open searchPostUrl
+		adminPostSearchPage =	adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
 		
-		adminPostSearchPage = PageGeneratorManager.getAdminPostSearchPage(driver);
+		
+		 
 		
 		
 	}

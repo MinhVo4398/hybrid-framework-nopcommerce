@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -123,7 +124,9 @@ public class BaseTest {
 
 		if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setAcceptInsecureCerts(false);
+			driver = new FirefoxDriver(options);
 
 		} else if (browserName.equals("h_firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -135,7 +138,9 @@ public class BaseTest {
 		}
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true);
+			driver = new ChromeDriver(options);
 
 		} else if (browserName.equals("h_chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -147,7 +152,7 @@ public class BaseTest {
 		}
 
 		else if (browserName.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+			WebDriverManager.edgedriver().setup();		
 			driver = new EdgeDriver();
 
 		} else if (browserName.equals("ie")) {
@@ -207,7 +212,7 @@ public class BaseTest {
 	protected int generateFakeNumber() {
 
 		Random rd = new Random();
-		return rd.nextInt(9999);
+		return rd.nextInt(99999);
 
 	}
 	
