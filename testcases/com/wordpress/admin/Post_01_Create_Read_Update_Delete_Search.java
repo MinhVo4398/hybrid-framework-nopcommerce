@@ -8,11 +8,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.wordpress.admin.AdminDashboardPO;
-import pageObjects.wordpress.admin.AdminLoginPO;
-import pageObjects.wordpress.admin.AdminPostAddNewPO;
-import pageObjects.wordpress.admin.AdminPostSearchPO;
-import pageObjects.wordpress.admin.PageGeneratorManager;
+import pageObjects.wordpress.AdminDashboardPO;
+import pageObjects.wordpress.AdminLoginPO;
+import pageObjects.wordpress.AdminPostAddNewPO;
+import pageObjects.wordpress.AdminPostSearchPO;
+import pageObjects.wordpress.PageGeneratorManager;
+import pageObjects.wordpress.UserHomePO;
+import pageObjects.wordpress.UserPostDetailPO;
 
 
 
@@ -23,19 +25,25 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	AdminDashboardPO admninDashboardPage;
 	AdminPostSearchPO adminPostSearchPage;
 	AdminPostAddNewPO adminPostAddNewPage;
+	UserHomePO userHomePage;
+	UserPostDetailPO userPostDetailPage;
 	String searchPostUrl ;
 	int randomNumber =  generateFakeNumber();
-	String postTitleValue ="Live Coding Title " + randomNumber;
-	String postBodyValue ="Live Coding Body " + randomNumber;
+	String postTitle ="Live Coding Title " + randomNumber;
+	String postBody ="Live Coding Body " + randomNumber;
+	String authorName ="automationfc";
 	String adminUsername ="automationfc";
 	String adminPassword ="automationfc";
-	
+	String adminUrl, endUserUrl;
+	String currentDay= getCurrentDay();
 
-	@Parameters({"browser", "urlAdmin"})
+	@Parameters({"browser", "urlAdmin","urlUser"})
 	@BeforeClass
-	public void beforeClass(String browserName, String adminUrl) {
-		log.info("Pre-Condition - Step 01: Open browser and admin URL");
-		driver = getBrowserDriver(browserName,adminUrl);		
+	public void beforeClass(String browserName, String adminUrl, String endUserUrl) {
+		log.info("Pre-Condition - Step 01: Open browser and Admin site");
+		this.adminUrl = adminUrl;
+		this.endUserUrl =endUserUrl;
+		driver = getBrowserDriver(browserName,this.adminUrl);		
 	//	adminLoginPage = new AdminLoginPO(driver); // Cách thông thường
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		
@@ -74,10 +82,10 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		
 				
 		log.info("Create_Post - Step 04: Enter to post title ");
-		adminPostAddNewPage.enterToAddNewPostTitle(postTitleValue);
+		adminPostAddNewPage.enterToAddNewPostTitle(postTitle);
 		
 		log.info("Create_Post - Step 05: Enter to body ");
-		adminPostAddNewPage.enterToAddNewPostBody(postBodyValue);
+		adminPostAddNewPage.enterToAddNewPostBody(postBody);
 		
 		log.info("Create_Post - Step 06: Click to 'Publish ' button ");
 		adminPostAddNewPage.clickToPublishButton();
@@ -94,22 +102,43 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	
 
 	@Test
-	public void Post_02_Search_Post() {
+	public void Post_02_Search_And_View_Post() {
 		log.info("Search_Post - Step 01: Open 'Search Post' page ");
 		// Open searchPostUrl
-		adminPostSearchPage =	adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
+		adminPostSearchPage = adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
 		
+		log.info("Search_Post - Step 02: Enter to Search textbox ");
+		adminPostSearchPage.enterToSearchTextbox(postTitle);
 		
-		 
+		log.info("Search_Post - Step 03: Click to 'Search Posts' button ");
+		adminPostSearchPage.clickToSearchPostsButton();
 		
+		log.info("Search_Post - Step 04: Verify Search table contains ' " + postTitle + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("title",postTitle));
 		
+		log.info("Search_Post - Step 05: Verify Search table contains ' " + authorName + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("author",authorName));
+		
+		log.info("Search_Post - Step 06: Open User site ");
+		userHomePage = adminPostSearchPage.openEndUserSite(driver,this.endUserUrl); // sau này trang admin bất kì vị trí nào cũng có thể mở dc endUser ra 
+		
+		log.info("Search_Post - Step 07: Verify Post Infor displayed at Home Page ");
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostTitle(postTitle));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostBody(postTitle,postBody));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostAuthor(postTitle,authorName));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostCurrentDay(postTitle,currentDay));
+		
+		log.info("Search_Post - Step 08: Click to Post Title ");
+		userPostDetailPage = userHomePage.clickToPostTitle(postTitle);
+		
+		log.info("Search_Post - Step 09: Verify Post infor displayed at Post detail Page ");
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostTitle(postTitle));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostBody(postTitle,postBody));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostAuthor(postTitle,authorName));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostCurrentDay(postTitle,currentDay));
 	}
 	
-	@Test
-	
-	public void Post_03_View_Post() {
-		
-	}
+
 	
 	@Test
 	public void Post_04_Edit_Post() {
