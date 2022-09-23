@@ -28,10 +28,23 @@ public class AdminPostAddNewPO extends BasePage {
 		sendkeyToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX,postBodyValue);
 		
 	}
+	
+	public void enterToEditPostBody(String postBodyValue) {
+		//Click
+		waitForElementClickable(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		clickToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		// Vì body text là thẻ p nên k clear dc, nên phải dùng hàm này để clear
+		clearValueInElementByDeleteKey(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		sleepInSecond(5);
+		//SendKey
+		waitForElementVisible(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);	
+		sendkeyToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX,postBodyValue);
+		
+	}
 
-	public void clickToPublishButton() {
-		waitForElementClickable(driver, AdminPostAddNewPageUI.PUBLISH_BUTTON);
-		clickToElement(driver, AdminPostAddNewPageUI.PUBLISH_BUTTON);
+	public void clickToPublishOrUpdateButton() {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
+		clickToElement(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
 		
 	}
 
@@ -40,9 +53,9 @@ public class AdminPostAddNewPO extends BasePage {
 		clickToElement(driver, AdminPostAddNewPageUI.PRE_PUBLISH_BUTTON);
 		
 	}
-	public boolean isPostPubishMessageDisplay(String postPublishedMessage) {
-		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
-		 return  isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
+	public boolean isPostPubishMessageDisplayed(String postPublishedMessage) {
+		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATED_MESSAGE, postPublishedMessage);
+		 return  isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATED_MESSAGE, postPublishedMessage);
 		
 	}
 

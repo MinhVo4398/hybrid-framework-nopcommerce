@@ -35,6 +35,11 @@ public class UserPostDetailPO extends BasePage {
 		return isElementDisplayed(driver, UserPostDetailPageUI.POST_CURRENT_DATE_TEXT_BY_POST_TITLE ,postTitle, currentDay);
 	}
 
+
+
+
+	
+
 	
 
 }

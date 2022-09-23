@@ -31,6 +31,8 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	int randomNumber =  generateFakeNumber();
 	String postTitle ="Live Coding Title " + randomNumber;
 	String postBody ="Live Coding Body " + randomNumber;
+	String editPostitle ="Edit Title" + randomNumber;
+	String editPostBody ="Edit Body"+ randomNumber;
 	String authorName ="automationfc";
 	String adminUsername ="automationfc";
 	String adminPassword ="automationfc";
@@ -66,9 +68,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	@Test
 	public void Post_01_Create_New_Post() {
-		log.info("Create_Post - Step 01:Click to 'Post' menu link");
-	
-		
+		log.info("Create_Post - Step 01:Click to 'Post' menu link");		
 		adminPostSearchPage =	admninDashboardPage.clickToPostMenuLink();
 		
 	
@@ -88,13 +88,13 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		adminPostAddNewPage.enterToAddNewPostBody(postBody);
 		
 		log.info("Create_Post - Step 06: Click to 'Publish ' button ");
-		adminPostAddNewPage.clickToPublishButton();
+		adminPostAddNewPage.clickToPublishOrUpdateButton();
 		
 		log.info("Create_Post - Step 07: Click to 'Pre-publish ' button ");
 		adminPostAddNewPage.clickToPreBulishButton();
 		
 		log.info("Create_Post - Step 08: Verify 'Post published' message is displayed ");
-		verifyTrue(adminPostAddNewPage.isPostPubishMessageDisplay("Post published."));
+		verifyTrue(adminPostAddNewPage.isPostPubishMessageDisplayed("Post published."));
 		
 		
 		
@@ -141,7 +141,70 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	
 	@Test
-	public void Post_04_Edit_Post() {
+	public void Post_03_Edit_Post() {
+		// đang ở trang User có thể truy cập dc trang ở Admin (vì đã viết ở BasePage)
+		log.info("Edit_Post - Step 01: Open Admin site ");
+		admninDashboardPage =	userPostDetailPage.openAdminSite(driver, this.adminUrl);
+		
+		log.info("Edit_Post - Step 02:Click to 'Post' menu link");		
+		adminPostSearchPage =	admninDashboardPage.clickToPostMenuLink();
+		
+		log.info("Edit_Post - Step 03: Enter to Search textbox ");
+		adminPostSearchPage.enterToSearchTextbox(postTitle);
+		
+		log.info("Edit_Post - Step 04: Click to 'Search Posts' button ");
+		adminPostSearchPage.clickToSearchPostsButton();
+		
+		log.info("Edit_Post - Step 05: Click to Post title detail link and navigate to Edit Post page ");
+		// Khi click vào PostTitleLink thì Add new vs Edit lúc này là 1 page nên k tạo thành 2 cái
+		adminPostAddNewPage  =	adminPostSearchPage.clickToPostTitleLink(postTitle);
+		
+		log.info("Edit_Post - Step 06: Edit to post title ");
+		adminPostAddNewPage.enterToAddNewPostTitle(editPostitle);
+		
+		log.info("Edit_Post - Step 07: Edit to body ");
+		adminPostAddNewPage.enterToEditPostBody(editPostBody);
+		
+		log.info("Edit_Post - Step 08: Click to 'Update ' button ");
+		adminPostAddNewPage.clickToPublishOrUpdateButton();
+		
+		log.info("Create_Post - Step 09: Verify 'Post upadate' message is displayed ");
+		verifyTrue(adminPostAddNewPage.isPostPubishMessageDisplayed("Post updated."));
+		
+		
+		log.info("Edit_Post - Step 10: Open 'Search Post' page ");
+		// Open searchPostUrl
+		adminPostSearchPage = adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
+		
+		log.info("Edit_Post - Step 11: Enter to Search textbox ");
+		adminPostSearchPage.enterToSearchTextbox(editPostitle);
+		
+		log.info("Edit_Post - Step 12: Click to 'Search Posts' button ");
+		adminPostSearchPage.clickToSearchPostsButton();
+		
+		log.info("Edit_Post - Step 13: Verify Search table contains ' " + editPostitle + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("title",editPostitle));
+		
+		log.info("Edit_Post - Step 14: Verify Search table contains ' " + authorName + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("author",authorName));
+		
+		log.info("Edit_Post - Step 15: Open User site ");
+		userHomePage = adminPostSearchPage.openEndUserSite(driver,this.endUserUrl); // sau này trang admin bất kì vị trí nào cũng có thể mở dc endUser ra 
+		
+		log.info("Edit_Post - Step 16: Verify Post Infor displayed at Home Page ");
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostTitle(editPostitle));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostBody(editPostitle,editPostBody));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostAuthor(editPostitle,authorName));
+		verifyTrue(userHomePage.isPostInforDisplayedWithPostCurrentDay(editPostitle,currentDay));
+		
+		log.info("Edit_Post - Step 17: Click to Post Title ");
+		userPostDetailPage = userHomePage.clickToPostTitle(editPostitle);
+		
+		log.info("Edit_Post - Step 18: Verify Post infor displayed at Post detail Page ");
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostTitle(editPostitle));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostBody(editPostitle,editPostBody));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostAuthor(editPostitle,authorName));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedWithPostCurrentDay(editPostitle,currentDay));
 		
 	}
 	

@@ -27,6 +27,7 @@ import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+import pageObjects.wordpress.AdminDashboardPO;
 import pageObjects.wordpress.UserHomePO;
 import pageUIs.jquery.uploadFiles.BasePageJQueryUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
@@ -236,6 +237,13 @@ public class BasePage extends BasePageNopCommerceUI {
 		element.clear();
 		element.sendKeys(textValue);
 	}
+	
+	public void clearValueInElementByDeleteKey(WebDriver driver, String locatorType) {
+		WebElement element = getWebElement(driver, locatorType);
+	
+		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+	}
+
 
 	public void sendkeyToElement(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
 		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
@@ -767,6 +775,11 @@ public class BasePage extends BasePageNopCommerceUI {
 	public UserHomePO openEndUserSite(WebDriver driver, String endUserUrl) {
 		openPageUrl(driver, endUserUrl);
 		return pageObjects.wordpress.PageGeneratorManager.getUserHomePage(driver);
+	}
+	
+	public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
+		openPageUrl(driver, adminUrl);
+		return pageObjects.wordpress.PageGeneratorManager.getAdminDashboardPage(driver);
 	}
 
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
