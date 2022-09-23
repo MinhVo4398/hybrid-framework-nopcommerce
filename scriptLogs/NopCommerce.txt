@@ -1,32 +1,81 @@
- [2022-09-22 11:25:04,756] Pre-Condition - Step 01: Open browser and Admin site
- [2022-09-22 11:25:11,436] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
- [2022-09-22 11:25:11,828] Pre-Condition - Step 03: Enter to Password textbox with value :automationfc
- [2022-09-22 11:25:12,030] Pre-Condition - Step 04:	Click to Login button
- [2022-09-22 11:25:18,201] Create_Post - Step 01:Click to 'Post' menu link
- [2022-09-22 11:25:20,644] Create_Post - Step 02: Get 'Search Posts' page Url
- [2022-09-22 11:25:20,651] Create_Post - Step 03:Click to 'Add New' button 
- [2022-09-22 11:25:24,636] Create_Post - Step 04: Enter to post title 
- [2022-09-22 11:25:25,725] Create_Post - Step 05: Enter to body 
- [2022-09-22 11:25:27,842] Create_Post - Step 06: Click to 'Publish ' button 
- [2022-09-22 11:25:28,485] Create_Post - Step 07: Click to 'Pre-publish ' button 
- [2022-09-22 11:25:28,729] Create_Post - Step 08: Verify 'Post published' message is displayed 
- [2022-09-22 11:25:32,845]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:33,058] Search_Post - Step 01: Open 'Search Post' page 
- [2022-09-22 11:25:34,949] Search_Post - Step 02: Enter to Search textbox 
- [2022-09-22 11:25:35,190] Search_Post - Step 03: Click to 'Search Posts' button 
- [2022-09-22 11:25:38,094] Search_Post - Step 04: Verify Search table contains ' Live Coding Title 74280'
- [2022-09-22 11:25:38,303]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:38,303] Search_Post - Step 05: Verify Search table contains ' automationfc'
- [2022-09-22 11:25:38,398]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:38,398] Search_Post - Step 06: Open User site 
- [2022-09-22 11:25:45,250] Search_Post - Step 07: Verify Post Infor displayed at Home Page 
- [2022-09-22 11:25:45,321]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:45,383]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:45,463]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:45,525]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:45,525] Search_Post - Step 08: Click to Post Title 
- [2022-09-22 11:25:46,807] Search_Post - Step 09: Verify Post infor displayed at Post detail Page 
- [2022-09-22 11:25:46,887]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:46,978]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:47,056]  -------------------------- PASSED -------------------------- 
- [2022-09-22 11:25:47,132]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:35,000] Pre-Condition - Step 01: Open browser and Admin site
+ [2022-09-23 14:08:38,620] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
+ [2022-09-23 14:08:38,829] Pre-Condition - Step 03: Enter to Password textbox with value :automationfc
+ [2022-09-23 14:08:38,970] Pre-Condition - Step 04:	Click to Login button
+ [2022-09-23 14:08:41,556] Create_Post - Step 01:Click to 'Post' menu link
+ [2022-09-23 14:08:42,858] Create_Post - Step 02: Get 'Search Posts' page Url
+ [2022-09-23 14:08:42,863] Create_Post - Step 03:Click to 'Add New' button 
+ [2022-09-23 14:08:45,363] Create_Post - Step 04: Enter to post title 
+ [2022-09-23 14:08:45,971] Create_Post - Step 05: Enter to body 
+ [2022-09-23 14:08:47,155] Create_Post - Step 06: Click to 'Publish ' button 
+ [2022-09-23 14:08:47,585] Create_Post - Step 07: Click to 'Pre-publish ' button 
+ [2022-09-23 14:08:47,776] Create_Post - Step 08: Verify 'Post published' message is displayed 
+ [2022-09-23 14:08:49,845]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:49,927] Search_Post - Step 01: Open 'Search Post' page 
+ [2022-09-23 14:08:51,136] Search_Post - Step 02: Enter to Search textbox 
+ [2022-09-23 14:08:51,324] Search_Post - Step 03: Click to 'Search Posts' button 
+ [2022-09-23 14:08:53,507] Search_Post - Step 04: Verify Search table contains ' Live Coding Title 1068'
+ [2022-09-23 14:08:53,582]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:53,582] Search_Post - Step 05: Verify Search table contains ' automationfc'
+ [2022-09-23 14:08:53,662]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:53,662] Search_Post - Step 06: Open User site 
+ [2022-09-23 14:08:54,890] Search_Post - Step 07: Verify Post Infor displayed at Home Page 
+ [2022-09-23 14:08:54,962]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:55,028]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:55,091]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:55,153]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:55,153] Search_Post - Step 08: Click to Post Title 
+ [2022-09-23 14:08:56,510] Search_Post - Step 09: Verify Post infor displayed at Post detail Page 
+ [2022-09-23 14:08:56,585]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:56,666]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:56,728]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:56,807]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:08:56,814] Edit_Post - Step 01: Open Admin site 
+ [2022-09-23 14:08:58,033] Edit_Post - Step 02:Click to 'Post' menu link
+ [2022-09-23 14:08:59,319] Edit_Post - Step 03: Enter to Search textbox 
+ [2022-09-23 14:08:59,469] Edit_Post - Step 04: Click to 'Search Posts' button 
+ [2022-09-23 14:09:01,742] Edit_Post - Step 05: Click to Post title detail link and navigate to Edit Post page 
+ [2022-09-23 14:09:04,141] Edit_Post - Step 06: Edit to post title 
+ [2022-09-23 14:09:04,661] Edit_Post - Step 07: Edit to body 
+ [2022-09-23 14:09:10,593] Edit_Post - Step 08: Click to 'Update ' button 
+ [2022-09-23 14:09:10,754] Create_Post - Step 09: Verify 'Post upadate' message is displayed 
+ [2022-09-23 14:09:11,967]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:11,967] Edit_Post - Step 10: Open 'Search Post' page 
+ [2022-09-23 14:09:14,266] Edit_Post - Step 11: Enter to Search textbox 
+ [2022-09-23 14:09:14,430] Edit_Post - Step 12: Click to 'Search Posts' button 
+ [2022-09-23 14:09:16,944] Edit_Post - Step 13: Verify Search table contains ' Edit Title1068'
+ [2022-09-23 14:09:17,025]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:17,026] Edit_Post - Step 14: Verify Search table contains ' automationfc'
+ [2022-09-23 14:09:17,105]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:17,105] Edit_Post - Step 15: Open User site 
+ [2022-09-23 14:09:18,200] Edit_Post - Step 16: Verify Post Infor displayed at Home Page 
+ [2022-09-23 14:09:18,279]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:18,373]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:18,436]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:18,499]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:18,499] Edit_Post - Step 17: Click to Post Title 
+ [2022-09-23 14:09:19,579] Edit_Post - Step 18: Verify Post infor displayed at Post detail Page 
+ [2022-09-23 14:09:19,702]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:19,772]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:19,835]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:19,897]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:19,902] Delete_Post - Step 01:Open Admin Site
+ [2022-09-23 14:09:21,232] Delete_Post - Step 02:Click to 'Post' menu link
+ [2022-09-23 14:09:22,585] Delete_Post - Step 03: Enter to Search textbox 
+ [2022-09-23 14:09:22,758] Delete_Post - Step 04: Click to 'Search Posts' button 
+ [2022-09-23 14:09:24,966] Delete_Post - Step 05: Select Post detail checkbox 
+ [2022-09-23 14:09:25,118] Delete_Post - Step 06: Select 'Move to Trash'item  in dropdown
+ [2022-09-23 14:09:25,284] Delete_Post - Step 07: Click to 'Apply' button
+ [2022-09-23 14:09:27,664] Delete_Post - Step 08: Verify '1 post moved to the Trash.' message is displayed
+ [2022-09-23 14:09:27,737]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:27,737] Delete_Post - Step 09: Enter to Search textbox 
+ [2022-09-23 14:09:27,891] Delete_Post - Step 10: Click to 'Search Posts' button 
+ [2022-09-23 14:09:30,867] Delete_Post - Step 11: Verify 'No posts found' message is displayed
+ [2022-09-23 14:09:30,927]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:30,927] Delete_Post - Step 12: Open User site 
+ [2022-09-23 14:09:31,981] Delete_Post - Step 13: Verify Postitle undisplayed at Home Page 
+ [2022-09-23 14:09:37,067]  -------------------------- PASSED -------------------------- 
+ [2022-09-23 14:09:37,067] Delete_Post - Step 14: Enter to search Textbox at Home Page 
+ [2022-09-23 14:09:37,205] Delete_Post - Step 15: Click search button 
+ [2022-09-23 14:09:38,283] Delete_Post - Step 16: Verify 'Nothing Found' message is displayed
+ [2022-09-23 14:09:38,356]  -------------------------- PASSED -------------------------- 
