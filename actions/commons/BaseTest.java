@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
@@ -45,27 +46,39 @@ public class BaseTest {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
-		System.out.println("Run on " + browserName);
+	
 		if (browserList == BrowserList.FIREFOX) {
 
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			// Add extension to Forefox
+			FirefoxProfile profile = new FirefoxProfile();
+			File translate = new File(GlobalConstants.PROJECT_PATH+"\\browserExtenstions\\to_google_translate-4.2.0.xpi");
+			profile.addExtension(translate);
+			
+			profile.setAcceptUntrustedCertificates(true);
+			profile.setAssumeUntrustedCertificateIssuer(false);
+			FirefoxOptions options = new FirefoxOptions();
+			options.setProfile(profile);
+			driver = new FirefoxDriver(options);
+			
 		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-
-			// Browser Option : Selenium 3.xx
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size = 1920x1080");
 			driver = new FirefoxDriver(options);
+			
 		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			// Add extension to Chrome
+			File file = new File(GlobalConstants.PROJECT_PATH+ "\\browserExtenstions\\extension_2_0_12_0.crx");
+			ChromeOptions options = new ChromeOptions();
+			options.addExtensions(file);			
+			driver = new ChromeDriver(options);
+			
 		} else if (browserList == BrowserList.H_CHROME) {
-			System.out.println(browserName);
-			WebDriverManager.chromedriver().setup();
-
-			// Browser Option : Selenium 3.xx
+			
+			WebDriverManager.chromedriver().setup();		
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size = 1920x1080");
