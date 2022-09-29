@@ -45,20 +45,11 @@ public class BaseTest {
 	protected WebDriver getBrowserDriver(String browserName) throws BrowserNotSupport {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-
 	
 		if (browserList == BrowserList.FIREFOX) {
 
-			WebDriverManager.firefoxdriver().setup();
-			// Add extension to Forefox
-			FirefoxProfile profile = new FirefoxProfile();
-			File translate = new File(GlobalConstants.PROJECT_PATH+"\\browserExtenstions\\to_google_translate-4.2.0.xpi");
-			profile.addExtension(translate);
-			
-			profile.setAcceptUntrustedCertificates(true);
-			profile.setAssumeUntrustedCertificateIssuer(false);
-			FirefoxOptions options = new FirefoxOptions();
-			options.setProfile(profile);
+			WebDriverManager.firefoxdriver().setup();			
+			FirefoxOptions options = new FirefoxOptions();						
 			driver = new FirefoxDriver(options);
 			
 		} else if (browserList == BrowserList.H_FIREFOX) {
@@ -69,11 +60,8 @@ public class BaseTest {
 			driver = new FirefoxDriver(options);
 			
 		} else if (browserList == BrowserList.CHROME) {
-			WebDriverManager.chromedriver().setup();
-			// Add extension to Chrome
-			File file = new File(GlobalConstants.PROJECT_PATH+ "\\browserExtenstions\\extension_2_0_12_0.crx");
-			ChromeOptions options = new ChromeOptions();
-			options.addExtensions(file);			
+			WebDriverManager.chromedriver().setup();					
+			ChromeOptions options = new ChromeOptions();				
 			driver = new ChromeDriver(options);
 			
 		} else if (browserList == BrowserList.H_CHROME) {
@@ -129,6 +117,7 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		// Mở Url nó qua trang HomePage
 		driver.get(GlobalConstants.PORTAL_TESTING_URL);
+		driver.manage().window().maximize();
 
 		return driver; // return driver để map qua bên Class kế thừa xài
 

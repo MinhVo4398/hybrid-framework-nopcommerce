@@ -1200,3 +1200,193 @@
 [2022-09-23 14:09:37,205] Delete_Post - Step 15: Click search button 
 [2022-09-23 14:09:38,283] Delete_Post - Step 16: Verify 'Nothing Found' message is displayed
 [2022-09-23 14:09:38,356]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:01:59,762] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:02:03,945] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
+[2022-09-26 19:04:24,931] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:05:11,940] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:06:30,645] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:07:47,017] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:07:49,491] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
+[2022-09-26 19:08:38,626] Pre-Condition - Step 01: Open browser and Admin site
+[2022-09-26 19:08:43,926] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
+[2022-09-26 19:08:44,236] Pre-Condition - Step 03: Enter to Password textbox with value :automationfc
+[2022-09-26 19:08:44,375] Pre-Condition - Step 04:	Click to Login button
+[2022-09-26 19:08:52,236] Create_Post - Step 01:Click to 'Post' menu link
+[2022-09-26 19:08:53,948] Create_Post - Step 02: Get 'Search Posts' page Url
+[2022-09-26 19:08:53,955] Create_Post - Step 03:Click to 'Add New' button 
+[2022-09-26 19:09:00,991] Create_Post - Step 04: Enter to post title 
+[2022-09-26 19:09:01,583] Create_Post - Step 05: Enter to body 
+[2022-09-26 19:09:02,958] Create_Post - Step 06: Click to 'Publish ' button 
+[2022-09-26 19:09:03,312] Create_Post - Step 07: Click to 'Pre-publish ' button 
+[2022-09-26 19:09:03,596] Create_Post - Step 08: Verify 'Post published' message is displayed 
+[2022-09-26 19:09:07,179]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:07,313] Search_Post - Step 01: Open 'Search Post' page 
+[2022-09-26 19:09:08,670] Search_Post - Step 02: Enter to Search textbox 
+[2022-09-26 19:09:08,843] Search_Post - Step 03: Click to 'Search Posts' button 
+[2022-09-26 19:09:11,226] Search_Post - Step 04: Verify Search table contains ' Live Coding Title 63850'
+[2022-09-26 19:09:11,420]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:11,420] Search_Post - Step 05: Verify Search table contains ' automationfc'
+[2022-09-26 19:09:11,513]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:11,513] Search_Post - Step 06: Open User site 
+[2022-09-26 19:09:13,020] Search_Post - Step 07: Verify Post Infor displayed at Home Page 
+[2022-09-26 19:09:13,099]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:13,176]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:13,243]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:13,319]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:13,319] Search_Post - Step 08: Click to Post Title 
+[2022-09-26 19:09:14,784] Search_Post - Step 09: Verify Post infor displayed at Post detail Page 
+[2022-09-26 19:09:14,845]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:14,936]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:15,030]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:15,092]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:15,098] Edit_Post - Step 01: Open Admin site 
+[2022-09-26 19:09:16,456] Edit_Post - Step 02:Click to 'Post' menu link
+[2022-09-26 19:09:17,792] Edit_Post - Step 03: Enter to Search textbox 
+[2022-09-26 19:09:17,962] Edit_Post - Step 04: Click to 'Search Posts' button 
+[2022-09-26 19:09:20,196] Edit_Post - Step 05: Click to Post title detail link and navigate to Edit Post page 
+[2022-09-26 19:09:22,646] Edit_Post - Step 06: Edit to post title 
+[2022-09-26 19:09:23,089] Edit_Post - Step 07: Edit to body 
+[2022-09-26 19:09:28,966] Edit_Post - Step 08: Click to 'Update ' button 
+[2022-09-26 19:09:29,120] Create_Post - Step 09: Verify 'Post upadate' message is displayed 
+[2022-09-26 19:09:30,298]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:30,298] Edit_Post - Step 10: Open 'Search Post' page 
+[2022-09-26 19:09:31,482] Edit_Post - Step 11: Enter to Search textbox 
+[2022-09-26 19:09:31,628] Edit_Post - Step 12: Click to 'Search Posts' button 
+[2022-09-26 19:09:33,888] Edit_Post - Step 13: Verify Search table contains ' Edit Title63850'
+[2022-09-26 19:09:33,972]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:33,972] Edit_Post - Step 14: Verify Search table contains ' automationfc'
+[2022-09-26 19:09:34,051]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:34,051] Edit_Post - Step 15: Open User site 
+[2022-09-26 19:09:35,043] Edit_Post - Step 16: Verify Post Infor displayed at Home Page 
+[2022-09-26 19:09:35,104]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:35,167]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:35,227]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:35,290]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:35,290] Edit_Post - Step 17: Click to Post Title 
+[2022-09-26 19:09:36,397] Edit_Post - Step 18: Verify Post infor displayed at Post detail Page 
+[2022-09-26 19:09:36,478]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:36,553]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:36,616]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:36,680]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:36,684] Delete_Post - Step 01:Open Admin Site
+[2022-09-26 19:09:37,940] Delete_Post - Step 02:Click to 'Post' menu link
+[2022-09-26 19:09:39,218] Delete_Post - Step 03: Enter to Search textbox 
+[2022-09-26 19:09:39,366] Delete_Post - Step 04: Click to 'Search Posts' button 
+[2022-09-26 19:09:41,481] Delete_Post - Step 05: Select Post detail checkbox 
+[2022-09-26 19:09:41,632] Delete_Post - Step 06: Select 'Move to Trash'item  in dropdown
+[2022-09-26 19:09:41,912] Delete_Post - Step 07: Click to 'Apply' button
+[2022-09-26 19:09:46,218] Delete_Post - Step 08: Verify '1 post moved to the Trash.' message is displayed
+[2022-09-26 19:09:46,292]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:46,292] Delete_Post - Step 09: Enter to Search textbox 
+[2022-09-26 19:09:46,443] Delete_Post - Step 10: Click to 'Search Posts' button 
+[2022-09-26 19:09:48,500] Delete_Post - Step 11: Verify 'No posts found' message is displayed
+[2022-09-26 19:09:48,567]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:48,567] Delete_Post - Step 12: Open User site 
+[2022-09-26 19:09:49,538] Delete_Post - Step 13: Verify Postitle undisplayed at Home Page 
+[2022-09-26 19:09:54,635]  -------------------------- PASSED -------------------------- 
+[2022-09-26 19:09:54,635] Delete_Post - Step 14: Enter to search Textbox at Home Page 
+[2022-09-26 19:09:54,837] Delete_Post - Step 15: Click search button 
+[2022-09-26 19:09:55,900] Delete_Post - Step 16: Verify 'Nothing Found' message is displayed
+[2022-09-26 19:09:55,994]  -------------------------- PASSED -------------------------- 
+[2022-09-27 17:07:14,198] Register - Step 01: Navigate to 'Register' page
+[2022-09-27 17:07:15,072] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-27 17:07:15,162] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-27 17:07:15,250] Register - Step 04: Enter date, month , year
+[2022-09-27 17:07:16,218] Register - Step 05: Enter to Email textbox with value is 'afc22761@mail.vn'
+[2022-09-27 17:07:16,336] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-27 17:07:16,402] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-27 17:07:16,489] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-27 17:07:26,595] Register - Step 09: Click to 'Register' button 
+[2022-09-27 17:07:28,555] Register - Step 10:  Verify Register success message is displayed
+[2022-09-27 17:07:28,794] Login - Step 01: Navigate to Login Page 
+[2022-09-27 17:07:30,294] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-27 17:07:30,394] Login - Step 03: Enter to Password textbox 
+[2022-09-27 17:07:30,484] Login - Step 04: Click to Login button 
+[2022-09-27 17:07:31,234] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-27 17:07:31,322] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-27 17:07:32,044] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-27 17:07:32,112] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-27 17:07:32,170] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-27 17:07:32,232] My Account - Step 05: Verify 'Email ' value is displayed 
+[2022-09-27 17:07:32,298] OS name = windows 10
+[2022-09-27 17:07:32,298] Driver instance name = firefoxdriver: firefox on windows (e8c970af-4e08-444b-9a23-eb13983ad705)
+[2022-09-27 17:13:10,655] Register - Step 01: Navigate to 'Register' page
+[2022-09-27 17:13:11,743] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-27 17:13:11,900] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-27 17:13:12,096] Register - Step 04: Enter date, month , year
+[2022-09-27 17:13:13,211] Register - Step 05: Enter to Email textbox with value is 'afc14088@mail.vn'
+[2022-09-27 17:13:13,302] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-27 17:13:13,376] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-27 17:13:13,458] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-27 17:13:23,550] Register - Step 09: Click to 'Register' button 
+[2022-09-27 17:13:25,129] Register - Step 10:  Verify Register success message is displayed
+[2022-09-27 17:13:25,418] Login - Step 01: Navigate to Login Page 
+[2022-09-27 17:13:27,174] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-27 17:13:27,304] Login - Step 03: Enter to Password textbox 
+[2022-09-27 17:13:27,400] Login - Step 04: Click to Login button 
+[2022-09-27 17:13:28,246] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-27 17:13:28,352] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-27 17:13:29,214] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-27 17:13:29,295] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-27 17:13:29,429] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-27 17:13:29,556] My Account - Step 05: Verify 'Email ' value is displayed 
+[2022-09-27 17:15:32,279] Register - Step 01: Navigate to 'Register' page
+[2022-09-27 17:15:33,949] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-27 17:15:34,095] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-27 17:15:34,229] Register - Step 04: Enter date, month , year
+[2022-09-27 17:15:34,769] Register - Step 05: Enter to Email textbox with value is 'afc39815@mail.vn'
+[2022-09-27 17:15:34,920] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-27 17:15:35,007] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-27 17:15:35,144] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-27 17:15:45,277] Register - Step 09: Click to 'Register' button 
+[2022-09-27 17:15:46,195] Register - Step 10:  Verify Register success message is displayed
+[2022-09-27 17:15:46,352] Login - Step 01: Navigate to Login Page 
+[2022-09-27 17:15:47,644] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-27 17:15:47,804] Login - Step 03: Enter to Password textbox 
+[2022-09-27 17:15:47,945] Login - Step 04: Click to Login button 
+[2022-09-27 17:15:48,696] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-27 17:15:48,770] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-27 17:15:49,273] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-27 17:15:49,330] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-27 17:15:49,391] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-27 17:15:49,454] My Account - Step 05: Verify 'Email ' value is displayed 
+[2022-09-28 13:36:31,355] Register - Step 01: Navigate to 'Register' page
+[2022-09-28 13:36:32,220] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-28 13:36:32,311] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-28 13:36:32,410] Register - Step 04: Enter date, month , year
+[2022-09-28 13:36:33,395] Register - Step 05: Enter to Email textbox with value is 'afc82591@mail.vn'
+[2022-09-28 13:36:33,512] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-28 13:36:33,561] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-28 13:36:33,658] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-28 13:36:43,756] Register - Step 09: Click to 'Register' button 
+[2022-09-28 13:36:45,707] Register - Step 10:  Verify Register success message is displayed
+[2022-09-28 13:36:45,955] Login - Step 01: Navigate to Login Page 
+[2022-09-28 13:36:47,472] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-28 13:36:47,568] Login - Step 03: Enter to Password textbox 
+[2022-09-28 13:36:47,647] Login - Step 04: Click to Login button 
+[2022-09-28 13:36:48,425] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-28 13:36:48,502] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-28 13:36:49,176] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-28 13:36:49,257] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-28 13:36:49,317] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-28 13:36:49,380] My Account - Step 05: Verify 'Email ' value is displayed 
+[2022-09-28 13:42:21,898] Register - Step 01: Navigate to 'Register' page
+[2022-09-28 13:42:22,794] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[2022-09-28 13:42:22,884] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[2022-09-28 13:42:22,973] Register - Step 04: Enter date, month , year
+[2022-09-28 13:42:23,925] Register - Step 05: Enter to Email textbox with value is 'afc28588@mail.vn'
+[2022-09-28 13:42:24,008] Register - Step 06: Tick to checkbox Newsletter
+[2022-09-28 13:42:24,065] Register - Step 07: Enter to Password textbox with value is '123456'
+[2022-09-28 13:42:24,148] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+[2022-09-28 13:42:34,227] Register - Step 09: Click to 'Register' button 
+[2022-09-28 13:42:36,304] Register - Step 10:  Verify Register success message is displayed
+[2022-09-28 13:42:36,432] Login - Step 01: Navigate to Login Page 
+[2022-09-28 13:42:38,035] Login - Step 02: Enter to Email textbox with value is '123456' 
+[2022-09-28 13:42:38,125] Login - Step 03: Enter to Password textbox 
+[2022-09-28 13:42:38,218] Login - Step 04: Click to Login button 
+[2022-09-28 13:42:38,990] Login - Step 05: Verify 'My Account' link is displayed 
+[2022-09-28 13:42:39,056] My Account - Step 01: Navigate to 'My Account' page 
+[2022-09-28 13:42:39,774] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[2022-09-28 13:42:39,846] My Account - Step 03: Verify 'First Name ' value is displayed 
+[2022-09-28 13:42:39,903] My Account - Step 04: Verify 'Last Name ' value is displayed 
+[2022-09-28 13:42:39,968] My Account - Step 05: Verify 'Email ' value is displayed 
