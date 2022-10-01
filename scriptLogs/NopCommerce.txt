@@ -1,20 +1,20 @@
- [2022-10-01 10:39:17,587] Register - Step 01: Navigate to 'Register' page
- [2022-10-01 10:39:18,433] Register - Step 02: Enter to Firstname textbox with value is 'auto'
- [2022-10-01 10:39:18,595] Register - Step 03: Enter to Lastname textbox with value is 'fc'
- [2022-10-01 10:39:18,733] Register - Step 04: Enter date, month , year
- [2022-10-01 10:39:19,196] Register - Step 05: Enter to Email textbox with value is 'automationfc93612@fakemail.com'
- [2022-10-01 10:39:19,372] Register - Step 06: Tick to checkbox Newsletter
- [2022-10-01 10:39:19,452] Register - Step 07: Enter to Password textbox with value is '1234556'
- [2022-10-01 10:39:19,607] Register - Step 08: Enter to Confirmpassword textbox with value is '1234556'
- [2022-10-01 10:39:24,764] Register - Step 09: Click to 'Register' button 
- [2022-10-01 10:39:26,620] Register - Step 10:  Verify Register success message is displayed
- [2022-10-01 10:39:26,887] Login - Step 01: Navigate to Login Page 
- [2022-10-01 10:39:28,201] Login - Step 02: Enter to Email textbox with value is '1234556' 
- [2022-10-01 10:39:28,360] Login - Step 03: Enter to Password textbox 
- [2022-10-01 10:39:28,500] Login - Step 04: Click to Login button 
- [2022-10-01 10:39:29,241] Login - Step 05: Verify 'My Account' link is displayed 
- [2022-10-01 10:39:29,326] My Account - Step 01: Navigate to 'My Account' page 
- [2022-10-01 10:39:29,864] My Account - Step 02: Verify 'Customer Infor' page is displayed 
- [2022-10-01 10:39:29,946] My Account - Step 03: Verify 'First Name ' value is displayed 
- [2022-10-01 10:39:30,006] My Account - Step 04: Verify 'Last Name ' value is displayed 
- [2022-10-01 10:39:30,068] My Account - Step 05: Verify 'Email ' value is displayed 
+ [2022-10-01 18:06:50,646] Register - Step 01: Navigate to 'Register' page
+ [2022-10-01 18:06:52,312] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+ [2022-10-01 18:06:52,460] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+ [2022-10-01 18:06:52,614] Register - Step 04: Enter date, month , year
+ [2022-10-01 18:06:53,111] Register - Step 05: Enter to Email textbox with value is 'automationfc53190@fakemail.com'
+ [2022-10-01 18:06:53,255] Register - Step 06: Tick to checkbox Newsletter
+ [2022-10-01 18:06:53,323] Register - Step 07: Enter to Password textbox with value is '123456'
+ [2022-10-01 18:06:53,477] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
+ [2022-10-01 18:06:58,609] Register - Step 09: Click to 'Register' button 
+ [2022-10-01 18:06:59,579] Register - Step 10:  Verify Register success message is displayed
+ [2022-10-01 18:06:59,702] Login - Step 01: Navigate to Login Page 
+ [2022-10-01 18:07:01,119] Login - Step 02: Enter to Email textbox with value is 'automationfc53190@fakemail.com' 
+ [2022-10-01 18:07:01,269] Login - Step 03: Enter to Password textbox 
+ [2022-10-01 18:07:01,397] Login - Step 04: Click to Login button 
+ [2022-10-01 18:07:02,175] Login - Step 05: Verify 'My Account' link is displayed 
+ [2022-10-01 18:07:02,254] My Account - Step 01: Navigate to 'My Account' page 
+ [2022-10-01 18:07:02,835] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+ [2022-10-01 18:07:02,913] My Account - Step 03: Verify 'First Name ' value is displayed 
+ [2022-10-01 18:07:02,978] My Account - Step 04: Verify 'Last Name ' value is displayed 
+ [2022-10-01 18:07:03,040] My Account - Step 05: Verify 'Email ' value is displayed 
