@@ -5,8 +5,8 @@ import java.util.Locale;
 import com.github.javafaker.Faker;
 
 public class DataHelper {
-	private Locale local = new Locale("vi");
-	private Faker faker = new Faker();
+	private Locale local = new Locale("en");
+	private Faker faker = new Faker(local);
 	
 	public static DataHelper getDataHelper() {
 		return new DataHelper();
@@ -35,4 +35,11 @@ public class DataHelper {
 	public String getAddress() {
 		return faker.address().streetAddress();
 	}
+	
+	//Number / Text / Special
+	public String getPassword() {
+		return faker.internet().password();
+	}
+	
+
 }

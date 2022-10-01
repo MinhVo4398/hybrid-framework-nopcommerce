@@ -19,10 +19,10 @@ import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 import ultilities.DataHelper;
 
-public class Level_20_Fake_Data extends BaseTest {
+public class Level_20_Manage_Data_Part_2 extends BaseTest {
 	//Declare
 	private WebDriver driver;
-	private DataHelper dataFaker;
+	
 
 	private  String  firstName, lastName, validPassword, emailAddress;
 	private String date, month, year;
@@ -39,24 +39,25 @@ public class Level_20_Fake_Data extends BaseTest {
 	
 	
 
-	@Parameters("browser")
+	@Parameters({"browser","firstName","lastName","email","password","date","month","year"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
+	public void beforeClass(String browserName, String firstName, String lastName, String emailAddress, String password, String date, String month, String year) {
 		driver = getBrowserDriver(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		// Khởi tạo dataFaker
-		dataFaker = DataHelper.getDataHelper();
+
 		
-		firstName =dataFaker.getFirstName();
-		lastName =dataFaker.getLastName();		
-		emailAddress = dataFaker.getEmailAddress();
-		validPassword ="123456";	
+		this.firstName =firstName ;
+		this.lastName = lastName;
+		this.emailAddress = emailAddress + generateFakeNumber() + "@fakemail.com";
+		this.validPassword = password;
+		this.date = date;
+		this.month = month;
+		this.year = year;
 		
-		date ="10"  ;
-		month ="August" ;
-		year = "1998" ;
+	
 
 	}
 
@@ -90,7 +91,7 @@ public class Level_20_Fake_Data extends BaseTest {
 		log.info("Register - Step 08: Enter to Confirmpassword textbox with value is '" + validPassword + "'");	
 		registerPage.inputToTextboxByID(driver,"ConfirmPassword",validPassword);
 		
-		registerPage.sleepInSecond(10);
+		registerPage.sleepInSecond(5);
 		
 	
 		
