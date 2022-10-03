@@ -54,7 +54,11 @@ public class Level_20_Manage_Data_Part_4 extends BaseTest {
 	
 		emailAddress =  userData.getEmailAddress()+ generateFakeNumber() + "@fakemail.com";
 		
+		System.out.println(userData.getSubjects().get(0).getName()); //Math
+		System.out.println(userData.getSubjects().get(0).getPoint()); //10.0
 		
+		System.out.println(userData.getSubjects().get(1).getName()); // Physical
+		System.out.println(userData.getSubjects().get(1).getPoint()); // 8.5
 
 	}
 

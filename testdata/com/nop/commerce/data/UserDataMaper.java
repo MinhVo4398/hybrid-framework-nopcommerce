@@ -2,6 +2,7 @@ package com.nop.commerce.data;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -46,7 +47,7 @@ public class UserDataMaper {
 	@JsonProperty("login")
 	private Login login;
 	
-	static class Login{
+	public static class Login{
 		@JsonProperty("username")
 		private String username;
 		
@@ -61,6 +62,28 @@ public class UserDataMaper {
 		return login.password;
 	}
 	
+	@JsonProperty("subjects")
+	private List<Subject> subjects;
+	
+	public List<Subject> getSubjects() {
+		return subjects;
+	}
+	
+	public static class Subject {
+		@JsonProperty("name")
+		private String name;
+		
+		@JsonProperty("point")
+		private String point;
+		
+		public String getName() {
+			return name;
+		}
+		
+		public String getPoint() {
+			return point;
+		}
+	}
 	
 	public String getFirstName() {
 		return firstName;
