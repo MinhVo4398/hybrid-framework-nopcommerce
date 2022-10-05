@@ -123,7 +123,7 @@ public class BaseTest {
 
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
+	protected WebDriver getBrowserDriver(String browserName, String environmentName) {
 
 		if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -186,7 +186,7 @@ public class BaseTest {
 		}
 
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.get(appUrl);
+		driver.get(getEnvironmentUrl(environmentName));
 		return driver;
 
 	}
@@ -195,18 +195,30 @@ public class BaseTest {
 		return this.driver;
 	}
 	
-	protected String getEnvironmentUrl(String serverName) {
+	protected String getEnvironmentUrl(String environmentName) {
 		String envUrl = null;
-		EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
-		if (environment == EnvironmentList.DEV) {
-			envUrl = "https://demo.nopcommerce.com/";
+		EnvironmentList environment = EnvironmentList.valueOf(environmentName.toUpperCase());
+		switch (environment) {
+			case DEV:
+				envUrl = "https://demo.nopcommerce.com/";
+				break;
+			case TESTING:
+				envUrl = "https://testing.nopcommerce.com";
+				break;
+			case STAGING:
+				envUrl = "https://staging.nopcommerce.com";
+				break;
+			case PRE_PRODUCTION:
+				envUrl = "https://pre-prod.nopcommerce.com";
+				break;
 
-		} else if (environment == EnvironmentList.TESTING) {
-			envUrl = "https://admin-demo.nopcommerce.com";
-		} else if (environment == EnvironmentList.STAGING) {
-			envUrl = "https://staging.orangehrm.live.com";
-		} else if (environment == EnvironmentList.PRODUCTION) {
-			envUrl = "https://production.orangehrm.live.com";
+			case PROD:
+				envUrl = "https://prod.nopcommerce.com";
+				break;
+
+			default:
+				envUrl = null;
+				break;
 		}
 
 		return envUrl;
