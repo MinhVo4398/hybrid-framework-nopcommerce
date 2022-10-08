@@ -19,6 +19,7 @@ public class MySQLTestConnection {
 
         System.out.println("Open connection:" + conn);
 
+        // Tạo ra 1 đối tượng của Statement
         Statement statement = conn.createStatement();
 
         String sql = "Select Emp.Emp_Id, Emp.First_Name, Emp.Last_Name, Emp.Dept_Id From Employee Emp;";

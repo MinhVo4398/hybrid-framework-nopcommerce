@@ -18,7 +18,7 @@ public class SQLServerConnUtils {
         Connection conn = null;
         try {
 
-          //  Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             // Cấu trúc URL Connection danh cho MySQL
 
