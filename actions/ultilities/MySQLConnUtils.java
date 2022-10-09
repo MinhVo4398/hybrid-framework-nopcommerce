@@ -1,4 +1,4 @@
-package jdbcTest;
+package ultilities;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,6 @@ public class MySQLConnUtils {
 
     public static Connection getMySQLConnection() {
         String hostName ="localhost";
-      //  String dbName ="automationtest";
         String dbName="automationfc";
         String userName="root";
         String password = "";

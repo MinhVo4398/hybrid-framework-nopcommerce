@@ -1,20 +1,11 @@
- [2022-10-05 18:51:26,893] Register - Step 01: Navigate to 'Register' page
- [2022-10-05 18:51:27,593] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
- [2022-10-05 18:51:27,741] Register - Step 03: Enter to Lastname textbox with value is 'FC'
- [2022-10-05 18:51:27,877] Register - Step 04: Enter date, month , year
- [2022-10-05 18:51:28,341] Register - Step 05: Enter to Email textbox with value is 'automationfc48409@fakemail.com'
- [2022-10-05 18:51:28,488] Register - Step 06: Tick to checkbox Newsletter
- [2022-10-05 18:51:28,582] Register - Step 07: Enter to Password textbox with value is '123456'
- [2022-10-05 18:51:28,720] Register - Step 08: Enter to Confirmpassword textbox with value is '123456'
- [2022-10-05 18:51:33,921] Register - Step 09: Click to 'Register' button 
- [2022-10-05 18:51:35,620] Register - Step 10:  Verify Register success message is displayed
- [2022-10-05 18:51:35,740] Login - Step 01: Navigate to Login Page 
- [2022-10-05 18:51:37,026] Login - Step 02: Enter to Email textbox with value is 'automationfc48409@fakemail.com' 
- [2022-10-05 18:51:37,172] Login - Step 03: Enter to Password textbox 
- [2022-10-05 18:51:37,314] Login - Step 04: Click to Login button 
- [2022-10-05 18:51:38,041] Login - Step 05: Verify 'My Account' link is displayed 
- [2022-10-05 18:51:38,117] My Account - Step 01: Navigate to 'My Account' page 
- [2022-10-05 18:51:38,686] My Account - Step 02: Verify 'Customer Infor' page is displayed 
- [2022-10-05 18:51:38,771] My Account - Step 03: Verify 'First Name ' value is displayed 
- [2022-10-05 18:51:38,830] My Account - Step 04: Verify 'Last Name ' value is displayed 
- [2022-10-05 18:51:38,894] My Account - Step 05: Verify 'Email ' value is displayed 
+ [2022-10-09 11:55:32,688] Pre-Condition - Step 01: Open browser and Admin site
+ [2022-10-09 11:55:35,845] Pre-Condition - Step 02: Enter to Username textbox with value : automationfc
+ [2022-10-09 11:55:36,053] Pre-Condition - Step 03: Enter to Password textbox with value :automationfc
+ [2022-10-09 11:55:36,173] Pre-Condition - Step 04:	Click to Login button
+ [2022-10-09 11:55:37,545] View_User - Step 01:Click to 'Post' menu link
+ [2022-10-09 11:55:38,219] View_User - Step 02:Get all users from UI
+ [2022-10-09 11:55:38,284] View_User - Step 03:Get all users from DB
+ [2022-10-09 11:55:38,524] View_User - Step 04: Verify the User are matching
+ [2022-10-09 11:55:38,525]  -------------------------- PASSED -------------------------- 
+ [2022-10-09 11:55:38,572] OS name = windows 11
+ [2022-10-09 11:55:38,572] Driver instance name = chromedriver: chrome on windows (a9f23b33aa38d727c94d3cbf4db7f847)

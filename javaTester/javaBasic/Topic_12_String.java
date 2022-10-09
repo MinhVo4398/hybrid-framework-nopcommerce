@@ -72,7 +72,7 @@ public class Topic_12_String {
         String results[] = result.split(" "); // dựa vào khoảng trắng tách thành 1 index => tách dc 5 element
 
 
-            System.out.println(results[1]); // 48
+        System.out.println(results[1]); // 48
 
         //Replace
         String productPrice = "$100.00";
@@ -129,6 +129,11 @@ public class Topic_12_String {
         System.out.println("Click to Login button ="+ String.format(dynamicButtonXpath, "login"));
         System.out.println("Click to Search button ="+ String.format(dynamicButtonXpath, "search"));
         System.out.println("Click to Register button ="+ String.format(dynamicButtonXpath, "register"));
+
+
+        String totalText = "3 items";
+        String totalArray[] = totalText.split(" "); // dựa vào khoảng trắng tách thành 1 index => tách dc 2 element
+        System.out.println(totalArray[0]); // 3
 
 
     }

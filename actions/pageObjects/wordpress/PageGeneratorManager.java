@@ -22,8 +22,10 @@ public class PageGeneratorManager {
 	public static UserHomePO getUserHomePage(WebDriver driver) {
 		return new UserHomePO(driver);
 	}
-	
-	
+
+	public static AdminUserPO getAdminUserPage(WebDriver driver) {
+		return  new AdminUserPO(driver);
+	}
 	public static UserPostDetailPO getUserPostDetailPage(WebDriver driver) {
 		return new UserPostDetailPO(driver);
 	}
@@ -33,5 +35,5 @@ public class PageGeneratorManager {
 	}
 	
 	
-	
+
 }
