@@ -278,7 +278,38 @@ public class BaseTest {
 
 	}
 
+	// Hàm này cho BrowserStack
+	protected WebDriver getBrowserDriverBrowserstack(String browserName, String appUrl, String osName, String osVersion	) {
+		DesiredCapabilities capability = new DesiredCapabilities();
 
+		capability.setCapability("os", osName);
+		capability.setCapability("osVersion", osVersion);
+		capability.setCapability("browser", browserName);
+		capability.setCapability("browser_version", "latest");
+		capability.setCapability("browserstack.debug", "true");
+
+		capability.setCapability("name", "Run on " + osName + " | " + osVersion + " | " + browserName );
+		if (osName.contains("Windows")) {
+			capability.setCapability("resolution", "1920x1080");
+		}
+		else {
+			capability.setCapability("resolution", "1920x1080");
+		}
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.BROSWER_STACK_URL),capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+
+
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+
+		driver.get(appUrl);
+		driver.manage().window().maximize();
+
+		return driver; // return driver để map qua bên Class kế thừa xài
+
+	}
 	public WebDriver getDriverInstance() {
 		return this.driver;
 	}

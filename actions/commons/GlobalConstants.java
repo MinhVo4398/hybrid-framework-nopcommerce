@@ -45,6 +45,10 @@ public class GlobalConstants {
 	
 	// Trang Admin LivetechPanda
 	public static final String ADMIN_LIVETECH_PANDA ="http://live.techpanda.org/index.php/backendlogin/customer/";
+
+	public static final String BROWSER_USERNAME ="minhv_LRHhFN";
+	public static final String BROWSER_AUTOMATIC_KEY="6rptsktqU2QgH3WSXBZE";
+	public static final String BROSWER_STACK_URL = "https://" + BROWSER_USERNAME + ":" + BROWSER_AUTOMATIC_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	
 	
 }

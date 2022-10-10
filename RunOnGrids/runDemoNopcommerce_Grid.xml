@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="NopCommerce_Grid">
+
+    <listeners>
+        <listener class-name ="commons.MethodListener" />
+        <!-- <listener class-name ="reportConfig.ReportNGListener" /> -->
+        <!-- <listener class-name ="reportConfig.ExtentTestListener" /> -->
+        <!-- <listener class-name ="reportConfig.AllureTestListener" /> -->
+        <!-- <listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
+        <!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>  -->
+
+    </listeners>
+       <!-- Global-->
+    <parameter name ="url" value="https://demo.nopcommerce.com/" />
+
+    <test name="Run on CHROME">
+        <parameter name ="browser" value ="chrome" />
+        <parameter name ="ipAddress" value ="192.168.1.10" />
+        <parameter name ="portNumber" value ="5555" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_Grid_2"/>
+
+        </classes>
+    </test>
+    <test name="Run on FIREFOX">
+        <parameter name ="browser" value ="firefox" />
+        <parameter name ="ipAddress" value ="192.168.1.10" />
+        <parameter name ="portNumber" value ="5555" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_Grid_2"/>
+
+        </classes>
+    </test>
+
+
+
+</suite>
