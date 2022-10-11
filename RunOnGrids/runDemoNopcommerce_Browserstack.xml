@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="NopComerce_Demo_Local">
+<suite parallel="false" name="NopComerce_Demo_BrowserStack">
 
     <listeners>
         <listener class-name ="commons.MethodListener" />
         <!-- <listener class-name ="reportConfig.ReportNGListener" /> -->
-        <!-- <listener class-name ="reportConfig.ExtentTestListener" /> -->
+         <listener class-name ="reportConfig.ExtentTestListener" />
         <!-- <listener class-name ="reportConfig.AllureTestListener" /> -->
         <!-- <listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
         <!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>  -->
@@ -14,7 +14,7 @@
     <!-- Global-->
     <parameter name ="url" value="https://demo.nopcommerce.com/" />
 
-    <test name="Run on FIREFOX">
+ <!--   <test name="Run on FIREFOX">
         <parameter name ="browser" value ="firefox" />
         <parameter name ="osName" value ="Windows" />
         <parameter name ="osVersion" value ="10" />
@@ -22,7 +22,8 @@
         <classes>
             <class name="com.nopcomerce.cloud.NopCommerce_Demo_3_Browserstack"/>
         </classes>
-    </test>
+    </test>-->
+
 
     <test name="Run on CHROME">
         <parameter name ="browser" value ="chrome" />
@@ -33,6 +34,8 @@
             <class name="com.nopcomerce.cloud.NopCommerce_Demo_3_Browserstack"/>
         </classes>
     </test>
+
+
 
 
 </suite>

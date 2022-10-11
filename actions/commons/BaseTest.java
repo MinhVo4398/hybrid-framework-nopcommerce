@@ -287,19 +287,17 @@ public class BaseTest {
 		capability.setCapability("browser", browserName);
 		capability.setCapability("browser_version", "latest");
 		capability.setCapability("browserstack.debug", "true");
-
+		capability.setCapability("project", "NopComerce");
+		capability.setCapability("resolution", "1920x1080");
 		capability.setCapability("name", "Run on " + osName + " | " + osVersion + " | " + browserName );
-		if (osName.contains("Windows")) {
-			capability.setCapability("resolution", "1920x1080");
-		}
-		else {
-			capability.setCapability("resolution", "1920x1080");
-		}
+
+
 		try {
 			driver = new RemoteWebDriver(new URL(GlobalConstants.BROSWER_STACK_URL),capability);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
+
 
 
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
