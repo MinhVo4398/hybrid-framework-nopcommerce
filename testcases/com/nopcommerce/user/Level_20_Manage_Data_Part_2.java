@@ -41,7 +41,7 @@ public class Level_20_Manage_Data_Part_2 extends BaseTest {
 	@Parameters({"browser","firstName","lastName","email","password","date","month","year"})
 	@BeforeClass
 	public void beforeClass(String browserName, String firstName, String lastName, String emailAddress, String password, String date, String month, String year) {
-		driver = getBrowserDriverGrid(browserName);
+		driver = getBrowserDriverLocal(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

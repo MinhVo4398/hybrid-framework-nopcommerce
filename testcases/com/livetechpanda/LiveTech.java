@@ -44,7 +44,7 @@ public class LiveTech extends BaseTest {
 		passWord ="123456789";
 		confirmPassword ="123456789";
 		
-		driver = getBrowserDriverLocal(browserName, appUrl);
+		driver = getBrowserDriver(browserName, appUrl);
 		//driver lấy xong ở hàm trên map vô getHomePage
 		
 		homePage = PageGenerator.getHomePage(driver);

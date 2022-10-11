@@ -43,7 +43,7 @@ public class Level_15_Allure extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriverGrid(browserName);
+		driver = getBrowserDriverLocal(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

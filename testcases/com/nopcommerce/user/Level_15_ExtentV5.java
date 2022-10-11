@@ -46,7 +46,7 @@ public class Level_15_ExtentV5 extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		
-		driver = getBrowserDriverGrid(browserName);
+		driver = getBrowserDriverLocal(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

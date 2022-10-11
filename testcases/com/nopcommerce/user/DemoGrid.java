@@ -28,7 +28,7 @@ public class DemoGrid extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl, String ipAddress, String port) {
 		//driver = getBrowserDriver(browserName);
-		driver = getBrowserDriverGrid("browserName","appUrl","ipAddress","port" );
+	//	driver = getBrowserDriverGrid("browserName","appUrl","ipAddress","port" );
 
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

@@ -29,7 +29,7 @@ public class Level_17_Custom_Close_Driver extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriverGrid(browserName);
+		driver = getBrowserDriverLocal(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

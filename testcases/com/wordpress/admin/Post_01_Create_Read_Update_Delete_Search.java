@@ -48,7 +48,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		log.info("Pre-Condition - Step 01: Open browser and Admin site");
 		this.adminUrl = adminUrl;
 		this.endUserUrl =endUserUrl;
-		driver = getBrowserDriverLocal(browserName,this.adminUrl);
+		driver = getBrowserDriver(browserName,this.adminUrl);
 	//	adminLoginPage = new AdminLoginPO(driver); // Cách thông thường
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		

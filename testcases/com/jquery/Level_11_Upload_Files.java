@@ -25,7 +25,7 @@ public class Level_11_Upload_Files extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
-		driver = getBrowserDriverLocal(browserName, appUrl);
+		driver = getBrowserDriver(browserName, appUrl);
 		homePage = PageGenerator.getHomePage(driver);
 
 	}

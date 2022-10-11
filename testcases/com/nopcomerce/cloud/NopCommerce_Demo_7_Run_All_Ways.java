@@ -6,10 +6,7 @@ import commons.BaseTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
@@ -34,11 +31,11 @@ public class NopCommerce_Demo_7_Run_All_Ways extends BaseTest {
 	
 	
 
-	@Parameters({"browser","url","osName"})
+	@Parameters({"envName","serverName","browser","ipAddress","portNumber","osName","osVersion"})
 	@BeforeClass
-	public void beforeClass(String browserName, String appUrl, String osName) {
+	public void beforeClass(@Optional("local") String envName, @Optional("dev")String serverName, @Optional("chrome")String browserName,@Optional("localhost") String ipAddress, @Optional("4444")String portNumber, @Optional("Windows")String osName, @Optional("10")String osVersion) {
 		
-		driver = getBrowserDriverLambda(browserName, appUrl,osName );
+		driver = getBrowserDriver(envName, serverName, browserName, ipAddress, portNumber, osName , osVersion);
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 	

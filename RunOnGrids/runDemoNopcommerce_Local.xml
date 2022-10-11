@@ -12,12 +12,13 @@
     </listeners>
 
     <!-- Global-->
-    <parameter name ="url" value="https://demo.nopcommerce.com/" />
+    <parameter name ="envName" value="local" />
+    <parameter name ="serverName" value="dev" />
 
     <test name="Run on CHROME">
         <parameter name ="browser" value ="chrome" />
         <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_Local_1"/>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
         </classes>
     </test>

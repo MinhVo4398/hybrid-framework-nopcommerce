@@ -12,7 +12,9 @@
     </listeners>
 
     <!-- Global-->
-    <parameter name ="url" value="https://demo.nopcommerce.com/" />
+    <parameter name ="envName" value="crossBrowser" />
+    <parameter name ="serverName" value="dev" />
+
 
     <test name="Run on FIREFOX">
         <parameter name ="browser" value ="firefox" />
@@ -20,7 +22,7 @@
 
 
         <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_5_CrossBrowser"/>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
         </classes>
     </test>
 
@@ -31,7 +33,7 @@
 
 
         <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_5_CrossBrowser"/>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
         </classes>
     </test>
 

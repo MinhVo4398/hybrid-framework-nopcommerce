@@ -35,7 +35,7 @@ public class Level_21_Multiple_Environment extends BaseTest {
 	@Parameters({"browser","environment"})
 	@BeforeClass
 	public void beforeClass(String browserName, String environmentName) {
-		driver = getBrowserDriverLocal(browserName, environmentName);
+		driver = getBrowserDriver(browserName, environmentName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

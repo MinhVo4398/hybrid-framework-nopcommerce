@@ -11,14 +11,15 @@
 
     </listeners>
        <!-- Global-->
-    <parameter name ="url" value="https://demo.nopcommerce.com/" />
+    <parameter name ="envName" value="grid" />
+    <parameter name ="serverName" value="dev" />
 
     <test name="Run on CHROME">
         <parameter name ="browser" value ="chrome" />
         <parameter name ="ipAddress" value ="192.168.1.10" />
         <parameter name ="portNumber" value ="5555" />
         <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_Grid_2"/>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
         </classes>
     </test>
@@ -27,7 +28,7 @@
         <parameter name ="ipAddress" value ="192.168.1.10" />
         <parameter name ="portNumber" value ="5555" />
         <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_Grid_2"/>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
         </classes>
     </test>

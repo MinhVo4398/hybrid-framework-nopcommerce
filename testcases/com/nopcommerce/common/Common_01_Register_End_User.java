@@ -28,7 +28,7 @@ public class Common_01_Register_End_User extends BaseTest {
 	@BeforeTest(description = "Create New Common User for all Class Test")
 	public void Register(String browserName ) {
 		
-		driver = getBrowserDriverGrid(browserName);
+		driver = getBrowserDriverLocal(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

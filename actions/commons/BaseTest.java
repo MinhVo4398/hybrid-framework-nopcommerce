@@ -129,7 +129,78 @@ public class BaseTest {
 		return driver; // return driver để map qua bên Class kế thừa xài
 
 	}
-	protected WebDriver getBrowserDriver(String browserName, String appUrl, String envName, String ipAddress, String portNumber, String osName, String osVersion) {
+
+	// Hàm này giữ lại cho những bài trước xài
+	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
+
+		if (browserName.equals("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setAcceptInsecureCerts(false);
+			driver = new FirefoxDriver(options);
+
+		} else if (browserName.equals("h_firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new FirefoxDriver(options);
+
+		}
+		if (browserName.equals("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true);
+			driver = new ChromeDriver(options);
+
+		} else if (browserName.equals("h_chrome")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new ChromeDriver(options);
+
+		}
+
+		else if (browserName.equals("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+
+		} else if (browserName.equals("ie")) {
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
+		} else if (browserName.equals("opera")) {
+			// opera cứ tải cái mới nhất
+			WebDriverManager.operadriver().setup();
+			driver = new OperaDriver();
+		} else if (browserName.equals("cococ")) {
+			// Cốc Cốc browser trừ đi 5-6 version ra ChromeDriver
+			WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
+
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			driver = new ChromeDriver(options);
+
+		} else if (browserName.equals("brave")) {
+			// Brave browser version nào dùng chromedriver version đó
+
+			WebDriverManager.chromedriver().driverVersion("97.0.4692.71").setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+			driver = new ChromeDriver(options);
+
+		} else {
+			throw new RuntimeException("Browser name invalid");
+		}
+
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.get(appUrl);
+		return driver;
+
+	}
+
+	// Hàm này custom cho các browser, Env , Cloud
+	protected WebDriver getBrowserDriver(String envName, String serverName, String browserName,   String ipAddress, String portNumber, String osName, String osVersion) {
 		switch( envName) {
 			case "local":
 				driver = new LocalFactory(browserName).createDriver();
@@ -142,16 +213,18 @@ public class BaseTest {
 			case "browserStack":
 			driver = new BrowserStackFactory(browserName, osName, osVersion).createDriver();
 				break;
+
 			case "saucelab":
-				driver = new LocalFactory(browserName).createDriver();
-				break;
-			case "crossBrowser":
-				driver = new LocalFactory(browserName).createDriver();
-				break;
-			case "lambda":
-				driver = new LocalFactory(browserName).createDriver();
+				driver = new SauceLabFactory(browserName,osName).createDriver();
 				break;
 
+			case "crossBrowser":
+				driver = new CrossBrowserFactory(browserName,osName).createDriver();
+				break;
+
+			case "lambda":
+				driver = new LambdaFactory(browserName,osName).createDriver();
+				break;
 
 
 			default:
@@ -160,117 +233,19 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(appUrl);
+		driver.get(getEnvironmentUrl(serverName));
 		return driver;
 	}
 
 
 
-
-
-	// Hàm này cho SauceLab
-	protected WebDriver getBrowserDriverSauceLab(String browserName, String appUrl, String osName) {
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("platformName", osName);
-		capability.setCapability("browserName", browserName);
-		capability.setCapability("browserVersion", "latest");
-		capability.setCapability("name", "Run on " + osName + " | " + browserName );
-
-		Map<String, Object> sauceOptions = new HashMap<>();
-		if(osName.contains("Windows")) {
-			sauceOptions.put("screenResolution", "1920x1080");
-		}
-		else {
-			sauceOptions.put("screenResolution", "1920x1440");
-		}
-		capability.setCapability("sauce:options", sauceOptions);
-
-
-		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCELAB_URL),capability);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-
-
-		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(appUrl);
-
-		return driver; // return driver để map qua bên Class kế thừa xài
-
-	}
-
-	// Hàm này dùng cho CrossBrowserTesting
-	protected WebDriver getBrowserDriverCrossBrowser(String browserName, String appUrl, String osName) {
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("browserName", browserName);
-		capability.setCapability("platform", osName);
-		if(osName.contains("Windows")) {
-			capability.setCapability("screenResolution", "1920x1080");
-		}
-		else {
-			capability.setCapability("screenResolution", "2560x1600");
-
-		}
-
-		capability.setCapability("name", "Run on " + osName + " | " + browserName );
-
-		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.CORSS_URRL),capability);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-
-
-		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(appUrl);
-
-		return driver; // return driver để map qua bên Class kế thừa xài
-
-	}
-
-	// Hàm này dùng cho Lambda
-	protected WebDriver getBrowserDriverLambda(String browserName, String appUrl, String osName) {
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("browserName", browserName);
-		capability.setCapability("platform", osName);
-		capability.setCapability("version", "latest");
-		capability.setCapability("visual", true);
-		capability.setCapability("video", true);
-
-		if(osName.contains("Windows")) {
-			capability.setCapability("screenResolution", "1920x1080");
-		}
-		else {
-			capability.setCapability("screenResolution", "2048x1536");
-		}
-
-		capability.setCapability("name", "Run on " + osName + " | " + browserName );
-
-		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.LAMBDA_URL),capability);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-
-
-		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(appUrl);
-
-		return driver; // return driver để map qua bên Class kế thừa xài
-
-	}
-
 	public WebDriver getDriverInstance() {
 		return this.driver;
 	}
 	
-	protected String getEnvironmentUrl(String environmentName) {
+	protected String getEnvironmentUrl(String serverName) {
 		String envUrl = null;
-		environment environment = factoryEnvironment.environment.valueOf(environmentName.toUpperCase());
+		environment environment = factoryEnvironment.environment.valueOf(serverName.toUpperCase());
 		switch (environment) {
 			case DEV:
 				envUrl = "https://demo.nopcommerce.com/";
