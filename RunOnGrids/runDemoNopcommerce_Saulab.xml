@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="NopComerce_Demo_Saulab">
+    <!-- Global-->
+    <parameter name ="url" value="https://demo.nopcommerce.com/" />
+
+    <listeners>
+        <listener class-name ="commons.MethodListener" />
+        <!-- <listener class-name ="reportConfig.ReportNGListener" /> -->
+        <!-- <listener class-name ="reportConfig.ExtentTestListener" />-->
+        <!-- <listener class-name ="reportConfig.AllureTestListener" /> -->
+        <!-- <listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
+        <!-- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>  -->
+
+    </listeners>
+<!--
+
+   <test name="Run on FIREFOX">
+        <parameter name ="browser" value ="Firefox" />
+        <parameter name ="osName" value ="macOS 11.00" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_4_SauceLab"/>
+        </classes>
+   </test>
+-->
+
+
+   <test name="Run on CHROME">
+        <parameter name ="browser" value ="chrome" />
+        <parameter name ="osName" value ="Windows 10" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_4_SauceLab"/>
+        </classes>
+    </test>
+
+
+
+</suite>

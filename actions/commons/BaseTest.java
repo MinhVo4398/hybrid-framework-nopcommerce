@@ -28,6 +28,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -304,6 +306,68 @@ public class BaseTest {
 
 		driver.get(appUrl);
 		driver.manage().window().maximize();
+
+		return driver; // return driver để map qua bên Class kế thừa xài
+
+	}
+	// Hàm này cho SauceLab
+	protected WebDriver getBrowserDriverSauceLab(String browserName, String appUrl, String osName) {
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("platformName", osName);
+		capability.setCapability("browserName", browserName);
+		capability.setCapability("browserVersion", "latest");
+		capability.setCapability("name", "Run on " + osName + " | " + browserName );
+
+		Map<String, Object> sauceOptions = new HashMap<>();
+		if(osName.contains("Windows")) {
+			sauceOptions.put("screenResolution", "1920x1080");
+		}
+		else {
+			sauceOptions.put("screenResolution", "1920x1440");
+		}
+		capability.setCapability("sauce:options", sauceOptions);
+
+
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCELAB_URL),capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+
+
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(appUrl);
+
+		return driver; // return driver để map qua bên Class kế thừa xài
+
+	}
+
+	// Hàm này dùng cho CrossBrowserTesting
+	protected WebDriver getBrowserDriverCrossBrowser(String browserName, String appUrl, String osName) {
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("browserName", browserName);
+		capability.setCapability("platform", osName);
+		if(osName.contains("Windows")) {
+			capability.setCapability("screenResolution", "1920x1080");
+		}
+		else {
+			capability.setCapability("screenResolution", "2560x1600");
+
+		}
+
+		capability.setCapability("name", "Run on " + osName + " | " + browserName );
+
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.CORSS_URRL),capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+
+
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(appUrl);
 
 		return driver; // return driver để map qua bên Class kế thừa xài
 
