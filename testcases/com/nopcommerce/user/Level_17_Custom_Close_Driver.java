@@ -103,7 +103,8 @@ public class Level_17_Custom_Close_Driver extends BaseTest {
 
 	@AfterClass (alwaysRun = true)
 	public void afterClass() {
-		closeBrowserAndDriver();
+		closeBrowserAndDriver("local");
+		//closeBrowserAndDriver();
 	}
 
 
