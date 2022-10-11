@@ -1,1 +1,0 @@
-{"uuid":"a04480b6-fdf7-4371-bead-0132d25f5385","name":"NopComerce_Demo_Local","children":["cdcb3519-835a-4b1f-890a-d324d151f3ac"],"befores":[{"name":"initBeforeSuite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1665411353990,"stop":1665411354005}],"afters":[],"links":[],"start":1665411353979,"stop":1665411363398}

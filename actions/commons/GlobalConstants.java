@@ -59,6 +59,11 @@ public class GlobalConstants {
 	//CROSS_BROWSER_TESTING ( DO KO CO ACCOUNT NEN DIEN THONG TIN AO)
 	public static final String CROSS_USERNAME ="dam@automationfc.com".replaceAll("@","%40");
 	public static final String CROSS_ACCESS_KEY ="u87f3344224455";
+		//Riêng crossbrowsertesting thì mới dùng http thôi
 	public static final String CORSS_URRL ="http://" + CROSS_USERNAME + ":" + CROSS_ACCESS_KEY	 + "@hub.crossbrowsertesting:80/wd/hub";
 
+	//LAMBDA TEST
+	public static final String LAMBADA_USERNAME = "minhvo4398";
+    public static final String LAMBDA_ACCESS_KEY = "qUR0Fdo4VXHrLqE2TTkBXzIWRFvickOqJ2dR07Y92KxGATehGr";
+	public static final String LAMBDA_URL = "https://" + LAMBADA_USERNAME + ":" + LAMBDA_ACCESS_KEY + "@hub.lambdatest.com/wd/hub";
 }
