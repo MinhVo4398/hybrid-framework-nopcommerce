@@ -2,13 +2,10 @@ package com.nopcommerce.user;
 
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.nopcommerce.common.Common_01_Register_End_User;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -40,7 +37,7 @@ public class Level_16_Share_Data_B extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

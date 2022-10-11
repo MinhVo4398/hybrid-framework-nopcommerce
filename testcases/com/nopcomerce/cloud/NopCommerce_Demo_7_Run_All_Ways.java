@@ -1,30 +1,25 @@
-package com.nopcommerce.user;
+package com.nopcomerce.cloud;
 
 
-import java.lang.reflect.Method;
-
+import com.aventstack.extentreports.Status;
+import commons.BaseTest;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.Status;
-
-import commons.BaseTest;
-import commons.PageGeneratorManager;
-import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
-import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 import reportConfig.ExtentTestManager;
 
+import java.lang.reflect.Method;
 
-public class Level_15_ExtentV5 extends BaseTest {
+
+public class NopCommerce_Demo_7_Run_All_Ways extends BaseTest {
 	//Declare
 	private WebDriver driver;
 
@@ -35,19 +30,15 @@ public class Level_15_ExtentV5 extends BaseTest {
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
 	private UserCustomerInforPageObject customerInforPage;
-	private UserAddressPageObject addressPage;
-	private UserMyProductReviewPageObject myProductReviewPage;
-	private UserRewardPointPageObject rewardPointPage;
-	
+
 	
 	
 
-	@Parameters("browser")
+	@Parameters({"browser","url","osName"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
+	public void beforeClass(String browserName, String appUrl, String osName) {
 		
-		driver = getBrowserDriverGrid(browserName);
-		
+		driver = getBrowserDriverLambda(browserName, appUrl,osName );
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 	
@@ -110,14 +101,14 @@ public class Level_15_ExtentV5 extends BaseTest {
 
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 05: Verify My Account Link Displayed");
-		Assert.assertFalse(homePage.isMyAccountLinkDisplayed());		
+		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 06: Open My Account page");
 		customerInforPage = homePage.openMyAccountPage();
 		
 	
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 07: Verify Customer page is displayed");
-		Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());   
+		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 		
 		
 	}

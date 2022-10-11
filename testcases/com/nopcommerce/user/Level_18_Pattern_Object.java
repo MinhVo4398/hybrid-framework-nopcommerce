@@ -40,7 +40,7 @@ public class Level_18_Pattern_Object extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

@@ -1,6 +1,6 @@
-package commons;
+package factoryEnvironment;
 
-public enum BrowserList {
+public enum browser {
 	FIREFOX, H_FIREFOX, CHROME, H_CHROME, EDGE, IE, OPERA, COCOC, BRAVE;
 
 }

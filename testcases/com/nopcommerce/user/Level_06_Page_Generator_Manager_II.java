@@ -2,7 +2,6 @@ package com.nopcommerce.user;
 
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,9 +12,6 @@ import commons.BaseTest;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Level_06_Page_Generator_Manager_II extends BaseTest {
 	//Declare
@@ -32,7 +28,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 		
 		//1
 		homePage= new UserHomePageObject(driver);

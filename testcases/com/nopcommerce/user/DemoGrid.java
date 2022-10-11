@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
@@ -29,7 +28,7 @@ public class DemoGrid extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl, String ipAddress, String port) {
 		//driver = getBrowserDriver(browserName);
-		driver = getBrowserDriver("browserName","appUrl","ipAddress","port" );
+		driver = getBrowserDriverGrid("browserName","appUrl","ipAddress","port" );
 
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

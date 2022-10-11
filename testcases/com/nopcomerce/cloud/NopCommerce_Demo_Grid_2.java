@@ -38,7 +38,7 @@ public class NopCommerce_Demo_Grid_2 extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl, String ipAddress, String portNumber) {
 		
-		driver = getBrowserDriver(browserName,appUrl,ipAddress,portNumber);
+		driver = getBrowserDriverGrid(browserName,appUrl,ipAddress,portNumber);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

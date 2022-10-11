@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nop.commerce.data.UserData;
 import com.nop.commerce.data.UserDataMaper;
 
 import commons.BaseTest;
@@ -20,7 +19,6 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
-import ultilities.DataHelper;
 
 public class Level_20_Manage_Data_Part_4 extends BaseTest {
 	//Declare
@@ -45,7 +43,7 @@ public class Level_20_Manage_Data_Part_4 extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

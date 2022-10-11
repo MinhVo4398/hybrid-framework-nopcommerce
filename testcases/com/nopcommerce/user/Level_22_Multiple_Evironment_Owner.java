@@ -42,7 +42,7 @@ public class Level_22_Multiple_Evironment_Owner extends BaseTest {
 		// Tao ra instance
 		environment = ConfigFactory.create(Environment.class);
 		// Goi ham nay no se lấy appUrl trong file dev properties
-		driver = getBrowserDriver(browserName, environment.appUrl());
+		driver = getBrowserDriverLocal(browserName, environment.appUrl());
 		System.out.println(environment.appUrl());
 		System.out.println(environment.appPassword());
 		System.out.println(environment.appUserName());

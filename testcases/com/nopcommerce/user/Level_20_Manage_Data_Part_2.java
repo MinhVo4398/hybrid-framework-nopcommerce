@@ -17,7 +17,6 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
-import ultilities.DataHelper;
 
 public class Level_20_Manage_Data_Part_2 extends BaseTest {
 	//Declare
@@ -42,7 +41,7 @@ public class Level_20_Manage_Data_Part_2 extends BaseTest {
 	@Parameters({"browser","firstName","lastName","email","password","date","month","year"})
 	@BeforeClass
 	public void beforeClass(String browserName, String firstName, String lastName, String emailAddress, String password, String date, String month, String year) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

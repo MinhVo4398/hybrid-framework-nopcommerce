@@ -35,7 +35,7 @@ public class NopCommerce_Demo_Local_1 extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		
-		driver = getBrowserDriver(browserName,appUrl);
+		driver = getBrowserDriverLocal(browserName,appUrl);
 		
 		// Khởi tạo homePage lên trước
 		homePage = PageGeneratorManager.getUserHomePage(driver);

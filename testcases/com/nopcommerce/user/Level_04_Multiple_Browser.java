@@ -28,7 +28,7 @@ public class Level_04_Multiple_Browser  extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName); // lấy driverTestClass để lấy driver hàm BaseTest để khởi tạo vì driver chỉ khai báo 1 lần
+		driver = getBrowserDriverGrid(browserName); // lấy driverTestClass để lấy driver hàm BaseTest để khởi tạo vì driver chỉ khai báo 1 lần
 
 		homePage= new UserHomePageObject(driver);
 

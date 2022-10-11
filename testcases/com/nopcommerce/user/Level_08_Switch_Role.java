@@ -13,13 +13,9 @@ import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObject.admin.nopCommerce.AdminDashboardPageObject;
 import pageObject.admin.nopCommerce.AdminLoginPageObject;
-import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
-import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
-import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 
 public class Level_08_Switch_Role extends BaseTest {
 	//Declare
@@ -40,7 +36,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriverGrid(browserName);
 			
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 		

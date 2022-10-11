@@ -1,7 +1,5 @@
 package com.jquery;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -27,7 +25,7 @@ public class Level_11_Upload_Files extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
-		driver = getBrowserDriver(browserName, appUrl);
+		driver = getBrowserDriverLocal(browserName, appUrl);
 		homePage = PageGenerator.getHomePage(driver);
 
 	}

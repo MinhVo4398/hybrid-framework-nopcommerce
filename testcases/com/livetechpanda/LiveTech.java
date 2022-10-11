@@ -1,7 +1,6 @@
 package com.livetechpanda;
 
 
-import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
@@ -45,7 +44,7 @@ public class LiveTech extends BaseTest {
 		passWord ="123456789";
 		confirmPassword ="123456789";
 		
-		driver = getBrowserDriver(browserName, appUrl);
+		driver = getBrowserDriverLocal(browserName, appUrl);
 		//driver lấy xong ở hàm trên map vô getHomePage
 		
 		homePage = PageGenerator.getHomePage(driver);

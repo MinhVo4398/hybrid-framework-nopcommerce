@@ -31,7 +31,7 @@ public class User_01_View_User extends BaseTest {
         log.info("Pre-Condition - Step 01: Open browser and Admin site");
         this.adminUrl = adminUrl;
         this.endUserUrl = endUserUrl;
-        driver = getBrowserDriver(browserName, this.adminUrl);
+        driver = getBrowserDriverLocal(browserName, this.adminUrl);
         //	adminLoginPage = new AdminLoginPO(driver); // Cách thông thường
         adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 

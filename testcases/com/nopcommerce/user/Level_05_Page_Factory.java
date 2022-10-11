@@ -2,7 +2,6 @@ package com.nopcommerce.user;
 
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -37,7 +36,7 @@ public class Level_05_Page_Factory extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName); // lấy driverTestClass để lấy driver hàm BaseTest để khởi tạo vì driver chỉ khai báo 1 lần
+		driver = getBrowserDriverGrid(browserName); // lấy driverTestClass để lấy driver hàm BaseTest để khởi tạo vì driver chỉ khai báo 1 lần
 
 
 

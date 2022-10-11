@@ -1,9 +1,6 @@
 package com.facebook.register;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -12,8 +9,6 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import pageObjects.facebook.LoginPageObject;
 import pageObjects.facebook.PageGeneratorManager;
-import pageObjects.jQuery.uploadFile.HomePageObject;
-import pageObjects.jQuery.uploadFile.PageGenerator;
 
 public class Level_13_Element_Undisplayed extends BaseTest {
 	private WebDriver driver;
@@ -23,7 +18,7 @@ public class Level_13_Element_Undisplayed extends BaseTest {
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
-		driver = getBrowserDriver(browserName, appUrl);
+		driver = getBrowserDriverLocal(browserName, appUrl);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 	}
 

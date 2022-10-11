@@ -27,7 +27,7 @@ public class Level10_DataTable_DataGrid extends BaseTest {
 	@Parameters({"browser", "url"})
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
-		driver = getBrowserDriver(browserName, appUrl);
+		driver = getBrowserDriverLocal(browserName, appUrl);
 		//driver lấy xong ở hàm trên map vô getHomePage
 		homePage = PageGeneratorManager.getHomePage(driver);
 		
