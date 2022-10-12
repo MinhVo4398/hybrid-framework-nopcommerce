@@ -14,25 +14,26 @@
     <parameter name ="envName" value="grid" />
     <parameter name ="serverName" value="dev" />
 
-    <test name="Run on CHROME">
-        <parameter name ="browser" value ="chrome" />
-        <parameter name ="ipAddress" value ="192.168.1.10" />
-        <parameter name ="portNumber" value ="5555" />
-        <classes>
-            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
-        </classes>
-    </test>
     <test name="Run on FIREFOX">
         <parameter name ="browser" value ="firefox" />
-        <parameter name ="ipAddress" value ="192.168.1.10" />
-        <parameter name ="portNumber" value ="5555" />
+        <parameter name ="ipAddress" value ="localhost" />
+        <parameter name ="portNumber" value ="4446" />
         <classes>
             <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
         </classes>
     </test>
 
+    <test name="Run on CHROME">
+        <parameter name ="browser" value ="chrome" />
+        <parameter name ="ipAddress" value ="localhost" />
+        <parameter name ="portNumber" value ="4445" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
 
+        </classes>
+
+    </test>
 
 </suite>

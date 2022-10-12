@@ -72,7 +72,7 @@ public class User_01_View_User extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        closeBrowserAndDriver();
+        //closeBrowserAndDriver();
     }
 
 

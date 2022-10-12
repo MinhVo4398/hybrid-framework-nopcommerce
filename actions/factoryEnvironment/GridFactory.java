@@ -35,7 +35,7 @@ public class GridFactory {
             WebDriverManager.firefoxdriver().setup();
             capabilitity =DesiredCapabilities.firefox();
             capabilitity.setBrowserName("firefox");
-            capabilitity.setPlatform(Platform.WINDOWS);
+            capabilitity.setPlatform(Platform.ANY);
 
             FirefoxOptions options = new FirefoxOptions();
             options.merge(capabilitity);
@@ -46,7 +46,7 @@ public class GridFactory {
             WebDriverManager.chromedriver().setup();
             capabilitity =DesiredCapabilities.chrome();
             capabilitity.setBrowserName("chrome");
-            capabilitity.setPlatform(Platform.WINDOWS);
+            capabilitity.setPlatform(Platform.ANY);
 
             ChromeOptions options = new ChromeOptions();
             options.merge(capabilitity);
@@ -91,7 +91,7 @@ public class GridFactory {
             throw new RuntimeException("Please enter correct browser name!");
         }
         try {
-            driver = new RemoteWebDriver(new URL(String.format("https://%s:%s/wd/hub",ipAddress,portNumber)),capabilitity);
+            driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub",ipAddress,portNumber)),capabilitity);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
