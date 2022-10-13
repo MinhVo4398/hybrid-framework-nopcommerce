@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="NopComerce_Demo_Local">
+<suite parallel="tests" thread-count="3" name="NopComerce_Demo_Local">
 
     <listeners>
-        <listener class-name ="commons.MethodListener" />
+        <listener class-name="commons.MethodListener"/>
         <!-- <listener class-name ="reportConfig.ReportNGListener" /> -->
         <!-- <listener class-name ="reportConfig.ExtentTestListener" /> -->
         <!-- <listener class-name ="reportConfig.AllureTestListener" /> -->
@@ -12,27 +12,31 @@
     </listeners>
 
     <!-- Global-->
-    <parameter name ="envName" value="local" />
-    <parameter name ="serverName" value="dev" />
+    <parameter name="envName" value="local"/>
+    <parameter name="serverName" value="dev"/>
 
     <test name="Run on CHROME">
-        <parameter name ="browser" value ="chrome" />
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
-
         </classes>
     </test>
+
 
     <test name="Run on FIREFOX">
-        <parameter name ="browser" value ="firefox" />
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
-
         </classes>
     </test>
 
 
-
+    <test name="Run on EDGE">
+        <parameter name="browser" value="EDGE_CHROMIUM"/>
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
+        </classes>
+    </test>
 
 
 </suite>

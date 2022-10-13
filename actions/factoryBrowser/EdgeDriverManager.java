@@ -12,11 +12,7 @@ public class EdgeDriverManager implements BrowserFactory {
 
     @Override
     public WebDriver getBrowserDriver() {
-        // Edge chỉ chạy trên Windows hoặc Mac thôi
-        if (!IS_OS_WINDOWS || !IS_OS_MAC) {
-            throw new BrowserNotSupportedException("Edge is not supported on" + System.getProperty("os.name"));
 
-        }
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions() ;
         // Gọi options vì sau này cần setting gì

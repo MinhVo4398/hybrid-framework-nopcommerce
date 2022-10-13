@@ -1,10 +1,12 @@
-1665633073400	geckodriver	INFO	Listening on 127.0.0.1:20777
-1665633073680	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileiulm74"
-1665633074228	Marionette	INFO	Marionette enabled
-1665633074233	Marionette	INFO	Listening on port 51679
-Read port: 51679
-1665633074803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileiulm74\\search.json.mozlz4", (void 0)))
+1665665460628	geckodriver	INFO	Listening on 127.0.0.1:6759
+1665665461253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofilejo8Jx3"
+1665665462306	Marionette	INFO	Marionette enabled
+1665665462325	Marionette	INFO	Listening on port 63025
+Read port: 63025
+Read port: 63025
+1665665463846	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofilejo8Jx3\\search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 307: NS_ERROR_FAILURE: Should pass a non-null uri
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
-1665633082820	Marionette	INFO	Stopped listening on port 51679
+1665665475323	Marionette	INFO	Stopped listening on port 63025

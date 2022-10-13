@@ -339,6 +339,7 @@ public class BaseTest {
 	
 	
 	protected void closeBrowserAndDriver(String envName) {
+		// Trên cloud thì k có cmd dc
 		if(envName.equals("local")||envName.equals("grid")) {
 			String cmd = "";
 			try {
@@ -385,6 +386,7 @@ public class BaseTest {
 				if (driver != null) {
 					driver.manage().deleteAllCookies();
 					driver.quit();
+
 				}
 			} catch (Exception e) {
 				log.info(e.getMessage());
