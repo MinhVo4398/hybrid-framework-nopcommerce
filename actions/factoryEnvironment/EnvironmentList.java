@@ -1,6 +1,6 @@
 package factoryEnvironment;
 
-public enum environment {
+public enum EnvironmentList {
 	DEV, TESTING, STAGING, PRE_PRODUCTION, PROD;
 
 }

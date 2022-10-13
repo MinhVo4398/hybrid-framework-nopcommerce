@@ -1,12 +1,12 @@
 package commons;
 
+import factoryBrowser.BrowserList;
 import factoryEnvironment.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,8 +15,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -25,10 +23,6 @@ import exception.BrowserNotSupport;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -51,50 +45,50 @@ public class BaseTest {
 	// Hàm này giữ lại cho những bài trước xài
 	protected WebDriver getBrowserDriverLocal (String browserName) throws BrowserNotSupport {
 
-		browser browserList = browser.valueOf(browserName.toUpperCase());
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
-		if (browserList == browser.FIREFOX) {
+		if (browserList == BrowserList.FIREFOX) {
 
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			driver = new FirefoxDriver(options);
 
-		} else if (browserList == browser.H_FIREFOX) {
+		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size = 1920x1080");
 			driver = new FirefoxDriver(options);
 
-		} else if (browserList == browser.CHROME) {
+		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			driver = new ChromeDriver(options);
 
-		} else if (browserList == browser.H_CHROME) {
+		} else if (browserList == BrowserList.H_CHROME) {
 
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size = 1920x1080");
 			driver = new ChromeDriver(options);
-		} else if (browserList == browser.EDGE) {
+		} else if (browserList == BrowserList.EDGE_CHROMIUM) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 
-		else if (browserList == browser.IE) {
+		else if (browserList == BrowserList.IE) {
 			WebDriverManager.iedriver().arch32().setup();
 			driver = new InternetExplorerDriver();
 		}
 
-		else if (browserList == browser.OPERA) {
+		else if (browserList == BrowserList.OPERA) {
 			// opera cứ tải cái mới nhất
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
 		}
 
-		else if (browserList == browser.COCOC) {
+		else if (browserList == BrowserList.COCOC) {
 			// Cốc Cốc browser trừ đi 5-6 version ra ChromeDriver
 			WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
 
@@ -107,7 +101,7 @@ public class BaseTest {
 
 			driver = new ChromeDriver(options);
 
-		} else if (browserList == browser.BRAVE) {
+		} else if (browserList == BrowserList.BRAVE) {
 			// Brave browser version nào dùng chromedriver version đó
 
 			WebDriverManager.chromedriver().driverVersion("97.0.4692.71").setup();
@@ -245,7 +239,7 @@ public class BaseTest {
 	
 	protected String getEnvironmentUrl(String serverName) {
 		String envUrl = null;
-		environment environment = factoryEnvironment.environment.valueOf(serverName.toUpperCase());
+		EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
 		switch (environment) {
 			case DEV:
 				envUrl = "https://demo.nopcommerce.com/";

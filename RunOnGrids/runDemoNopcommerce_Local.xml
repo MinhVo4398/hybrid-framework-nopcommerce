@@ -23,6 +23,16 @@
         </classes>
     </test>
 
+    <test name="Run on FIREFOX">
+        <parameter name ="browser" value ="firefox" />
+        <classes>
+            <class name="com.nopcomerce.cloud.NopCommerce_Demo_7_Run_All_Ways"/>
+
+        </classes>
+    </test>
+
+
+
 
 
 </suite>

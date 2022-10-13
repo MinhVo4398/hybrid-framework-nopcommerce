@@ -1,7 +1,6 @@
 package commons;
 
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +20,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObject.admin.nopCommerce.AdminLoginPageObject;
+import pageFactory.nopCommerce.nopCommerce.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
@@ -635,7 +634,7 @@ public class BasePage extends BasePageNopCommerceUI {
 	// Upload Multiple File
 	public void uploadMultipleFiles(WebDriver driver, String...fileNames) {
 		// Đường dẫn của thư mục UploadFile: Windows/MAC/ Linux
-		String filePath = GlobalConstants.UPLOAD_FILE;
+		String filePath = GlobalConstants.UPLOAD_FILE_PATH;
 		
 		// Đường dẫn tất cả các file
 		//1 file: Java.png

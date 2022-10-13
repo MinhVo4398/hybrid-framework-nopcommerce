@@ -1,6 +1,7 @@
 package factoryEnvironment;
 
 import commons.GlobalConstants;
+import factoryBrowser.BrowserList;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -27,10 +28,10 @@ public class GridFactory {
         this.portNumber = portNumber;
     }
     public WebDriver createDriver() {
-        browser browserList = browser.valueOf(browserName.toUpperCase());
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         DesiredCapabilities capabilitity = null;
 
-        if (browserList == browser.FIREFOX) {
+        if (browserList == BrowserList.FIREFOX) {
 
             WebDriverManager.firefoxdriver().setup();
             capabilitity =DesiredCapabilities.firefox();
@@ -42,7 +43,7 @@ public class GridFactory {
 
         }
 
-        else if (browserList == browser.CHROME) {
+        else if (browserList == BrowserList.CHROME) {
             WebDriverManager.chromedriver().setup();
             capabilitity =DesiredCapabilities.chrome();
             capabilitity.setBrowserName("chrome");
@@ -52,19 +53,19 @@ public class GridFactory {
             options.merge(capabilitity);
 
         }
-        else if (browserList == browser.EDGE) {
+        else if (browserList == BrowserList.EDGE_CHROMIUM) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
 
 
-        else if (browserList == browser.OPERA) {
+        else if (browserList == BrowserList.OPERA) {
             // opera cứ tải cái mới nhất
             WebDriverManager.operadriver().setup();
             driver = new OperaDriver();
         }
 
-        else if (browserList == browser.COCOC) {
+        else if (browserList == BrowserList.COCOC) {
             // Cốc Cốc browser trừ đi 5-6 version ra ChromeDriver
             WebDriverManager.chromedriver().driverVersion("96.0.4664.45").setup();
 
@@ -77,7 +78,7 @@ public class GridFactory {
 
             driver = new ChromeDriver(options);
 
-        } else if (browserList == browser.BRAVE) {
+        } else if (browserList == BrowserList.BRAVE) {
             // Brave browser version nào dùng chromedriver version đó
 
             WebDriverManager.chromedriver().driverVersion("97.0.4692.71").setup();

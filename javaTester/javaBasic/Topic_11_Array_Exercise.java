@@ -63,7 +63,7 @@ public class Topic_11_Array_Exercise {
 		
 	@Test
 	public void TC_06() {
-		String filePath = GlobalConstants.UPLOAD_FILE;
+		String filePath = GlobalConstants.UPLOAD_FILE_PATH;
 		String fullFileName ="";
 		String [] fileNames ={"CScharp.jpg","Java.png","Python.png"};
 		for (String file : fileNames) {

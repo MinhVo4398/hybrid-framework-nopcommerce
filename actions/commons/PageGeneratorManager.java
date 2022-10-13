@@ -2,8 +2,8 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
-import pageObject.admin.nopCommerce.AdminDashboardPageObject;
-import pageObject.admin.nopCommerce.AdminLoginPageObject;
+import pageFactory.nopCommerce.nopCommerce.AdminDashboardPageObject;
+import pageFactory.nopCommerce.nopCommerce.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
